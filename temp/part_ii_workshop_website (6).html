@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd US-Singapore R-CPIS Workshop | Washington D.C.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        /* Custom scrollbar for professional look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+
+    <!-- Top Banner: Strategic Context -->
+    <div class="bg-slate-900 text-slate-300 py-2.5 px-4 text-center text-xs font-medium border-b border-slate-800 tracking-wider">
+        <span class="bg-blue-500/10 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded mr-2 uppercase text-[10px]">NSF Supported</span>
+        Part II: Washington D.C. Research Convening — Focused Roadmapping Session
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white p-2.5 rounded-lg font-bold text-xl tracking-tight flex items-center justify-center">
+                    <span class="text-blue-500">R</span>
+                    <span class="text-slate-400 font-normal mx-0.5">|</span>
+                    <span>CPIS</span>
+                </div>
+                <div>
+                    <h1 class="text-sm font-bold text-slate-900 uppercase tracking-wider leading-none">US-Singapore Alliance</h1>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Research Alliance on Complex Cyber-Physical Infrastructure Systems</p>
+                </div>
+            </div>
+            
+            <!-- Tab / View Controller (Separate "Page" selector) -->
+            <div class="hidden md:flex items-center bg-slate-100 p-1.5 rounded-xl border border-slate-200">
+                <button onclick="switchView('overview')" id="nav-overview" class="px-5 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    Workshop Overview
+                </button>
+                <button onclick="switchView('agenda')" id="nav-agenda" class="px-5 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Detailed Agenda
+                </button>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 border border-slate-200 px-3.5 py-2 rounded-lg transition-all bg-slate-50">
+                    <span>← Part I: Singapore</span>
+                </a>
+                <!-- Mobile Navigation Menu Toggle Button -->
+                <button onclick="toggleMobileNav()" class="md:hidden p-2 text-slate-600 hover:text-slate-900 border border-slate-200 rounded-lg bg-slate-50">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-nav" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-2">
+            <button onclick="switchView('overview'); toggleMobileNav();" class="w-full text-left px-4 py-2.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-950 flex items-center gap-2">
+                Workshop Overview
+            </button>
+            <button onclick="switchView('agenda'); toggleMobileNav();" class="w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-950 flex items-center gap-2">
+                Detailed Agenda
+            </button>
+            <a href="index.html" class="block text-left px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-950">
+                ← Part I: Singapore Recap
+            </a>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         VIEW 1: WORKSHOP OVERVIEW (MAIN PAGE)
+         ============================================== -->
+    <div id="view-overview" class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+            
+            <div class="relative max-w-5xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 px-3 py-1 rounded-full text-xs text-slate-300 mb-6 backdrop-blur">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span>September 17-18, 2026</span>
+                    <span class="text-slate-500">•</span>
+                    <span>George Mason University (Washington D.C. Area)</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Resilience of Complex Cyber-Physical <br class="hidden lg:block">
+                    Infrastructure Systems in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-400">Era of AI</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+                    An invitation-only, output-driven roadmap workshop addressing technology acceleration (AI, Quantum, Robotics) and systemic threat escalation (natural & anthropogenic hazards).
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#about" class="w-full sm:w-auto bg-slate-800/80 border border-slate-700 hover:bg-slate-800 text-slate-300 px-8 py-3.5 rounded-lg text-sm font-semibold transition-all text-center">
+                        Read Executive Focus
+                    </a>
+                    <button onclick="switchView('agenda')" class="w-full sm:w-auto bg-white text-slate-950 hover:bg-slate-100 px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-md flex items-center justify-center gap-2">
+                        <span>Go to Detailed Schedule</span>
+                        <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </div>
+
+                <!-- Stats/Context Strip -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-8 border-t border-slate-800/80 text-left">
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Scale</p>
+                        <p class="text-2xl font-bold text-white mt-1">30–40</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Selected Experts Only</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Format</p>
+                        <p class="text-2xl font-bold text-white mt-1">Focused</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Active Writing Breakouts</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Objective</p>
+                        <p class="text-2xl font-bold text-sky-400 mt-1">Roadmap</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">NSF-Singapore Research</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Predecessor</p>
+                        <a href="index.html" class="group text-2xl font-bold text-white mt-1 flex items-center gap-1 hover:text-blue-400 transition-colors">
+                            Singapore
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-400 transform group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Held March 18-19, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Driver Segment -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">The Strategic Mandate</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                        Why a Second, More Focused Workshop?
+                    </h2>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        While the initial convening in Singapore mapped out the generalized theoretical frameworks of US-Singapore R-CPIS cooperation, the D.C. follow-up demands actionable specificity. We converge at a historical juncture governed by two accelerating trends:
+                    </p>
+                    
+                    <div class="mt-6 p-4 rounded-xl border border-amber-200 bg-amber-50/50 flex gap-3 text-xs text-amber-800 leading-relaxed">
+                        <span class="text-lg">💡</span>
+                        <div>
+                            <strong class="font-semibold block mb-0.5">Roadmap Objective:</strong>
+                            The sole deliverable of this invite-only session is the compilation of a high-impact research prospectus directing collaborative cross-border research funding on infrastructure survivability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual comparison of the two intersecting drivers -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Trend Card 1 -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                        <span class="mono text-slate-400 text-xs font-bold">ACCELERATION 01</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Disruptive Technologies</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Rapid convergence of quantum engineering, decentralized autonomous robotics, and agentic AI. These offer breakthrough protective capabilities while simultaneously presenting unprecedented system vulnerability surfaces.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-blue-500">✓</span> Quantum optimization algorithms
+                            </li>
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-blue-500">✓</span> Autonomous physical repairs
+                            </li>
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-blue-500">✓</span> Generative cyber-security barriers
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Trend Card 2 -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-red-500"></div>
+                        <span class="mono text-slate-400 text-xs font-bold">ACCELERATION 02</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Compounding Hazards</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Increasing frequency, severity, and cascading correlation of natural disasters (extreme climate events) and artificial, coordinated threat vectors (state-sponsored cyber assaults, complex physical sabotage).
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-[11px] text-slate-500 font-medium">
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-red-500">⚠</span> Concurrent black-sky incidents
+                            </li>
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-red-500">⚠</span> Trans-boundary dependencies
+                            </li>
+                            <li class="flex items-center gap-1.5">
+                                <span class="text-red-500">⚠</span> Fast-developing system failures
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Workshop Themes -->
+        <section id="themes" class="bg-slate-100 py-20 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">Scientific Domains</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                        Focus Areas & Technical Pillars
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-sm">
+                        Rather than a broad disciplinary survey, the D.C. convening focuses heavily on three critical, cutting-edge intersections of security and engineering.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left Hand Selectors (3 Pillars) -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <!-- Pillar 1 -->
+                        <div id="pillar-btn-1" onclick="selectPillar(1)" class="cursor-pointer bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm transition-all duration-200">
+                            <div class="flex items-start gap-4">
+                                <span class="bg-blue-100 text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-1">1</span>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-slate-950">Quantum Engineering for Infrastructure Systems</h3>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Leveraging quantum sensors for preemptive material decay detection and quantum computing paradigms to simulate extremely complex, high-dimensional failure dynamics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div id="pillar-btn-2" onclick="selectPillar(2)" class="cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200">
+                            <div class="flex items-start gap-4">
+                                <span class="bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-2">2</span>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-slate-950">Resilience Red Teaming</h3>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Constructing systematic adversarial framework models designed to aggressively exploit hidden inter-dependencies, validating digital twins, and assessing dynamic failover configurations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div id="pillar-btn-3" onclick="selectPillar(3)" class="cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200">
+                            <div class="flex items-start gap-4">
+                                <span class="bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-3">3</span>
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-bold text-slate-950">Unconventional & Nature-Based Solutions</h3>
+                                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                        Blending ecological infrastructure adaptations (nature-based barriers, bio-mimetic structures) with cyber-physical telemetry to build resilient hybrid protective mechanisms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hand Info card: Dynamic content based on clicked pillar -->
+                    <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-8 border border-slate-800 shadow-xl min-h-[420px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span id="display-badge" class="bg-blue-500/10 text-blue-400 border border-blue-500/30 px-3 py-1 rounded text-[11px] font-mono uppercase tracking-widest">
+                                    Pillar 1 Scope
+                                </span>
+                                <span class="text-slate-500 text-xs font-mono">US-SG R-CPIS Alliance</span>
+                            </div>
+                            
+                            <h4 id="display-title" class="text-2xl font-bold tracking-tight mb-4 text-white">
+                                Quantum Engineering
+                            </h4>
+                            
+                            <p id="display-desc" class="text-xs text-slate-300 leading-relaxed mb-6">
+                                Quantum sensors will allow us to measure real-time micro-stresses on bridges, underground water pipelines, and power substations at precision rates previously unimaginable. Concurrently, developing scalable algorithms on upcoming quantum computers prepares our grid operations to dynamic optimization protocols even during total regional signal failures.
+                            </p>
+
+                            <div class="bg-slate-800/80 border border-slate-700/80 p-4 rounded-xl">
+                                <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider mb-2">Key Roadmap Chapter Questions:</span>
+                                <ul id="display-questions" class="space-y-2 text-xs text-slate-200">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-400 font-bold">•</span>
+                                        <span>How can quantum key distribution (QKD) be scaled cheaply to secure operational technology networks?</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-400 font-bold">•</span>
+                                        <span>What are the constraints of current-generation NISQ computers for complex load-balancing simulations?</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                            <span>Lead Rapporteur Target</span>
+                            <span class="text-white font-semibold">1 Industry Leader & 2 Academics</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizing Committee & Confirmed Participants Section -->
+        <section id="participants" class="bg-slate-100 text-slate-900 py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2 font-mono">Workshop Roster</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Organizers & Collaborators</h2>
+                    <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+                        Meet the steering committee leading the D.C. convening and the confirmed experts driving our core research pillars.
+                    </p>
+                </div>
+
+                <!-- Stakeholder Composition Breakdown -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                    <!-- Academia Card -->
+                    <div class="bg-white border border-slate-200 shadow-sm p-6 rounded-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-blue-50 text-blue-600 text-[10px] font-mono px-2.5 py-1 rounded-bl-xl border-l border-b border-slate-200">
+                            ~20 Experts
+                        </div>
+                        <div class="text-2xl mb-3">🎓</div>
+                        <h4 class="text-base font-bold text-slate-900 mb-2">Academic Researchers</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Pioneering foundational scientific theories, experimental methodologies, and technical foresight in quantum engineering, control optimization, and ecological systems. Over 20 selected international scholars will collaborate directly on drafting our core roadmap.
+                        </p>
+                    </div>
+                    
+                    <!-- Government Card -->
+                    <div class="bg-white border border-slate-200 shadow-sm p-6 rounded-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-indigo-50 text-indigo-600 text-[10px] font-mono px-2.5 py-1 rounded-bl-xl border-l border-b border-slate-200">
+                            Policy & Funders
+                        </div>
+                        <div class="text-2xl mb-3">🏛️</div>
+                        <h4 class="text-base font-bold text-slate-900 mb-2">Government Agencies</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Key strategic representation from federal actors including the National Science Foundation (<span class="font-bold text-slate-800">NSF</span>), the Department of Transportation (<span class="font-bold text-slate-700">USDOT</span>), and <span class="font-bold text-slate-700">NIST</span> to align collaborative research pathways directly with national safety, standards, and funding pipelines.
+                        </p>
+                    </div>
+                    
+                    <!-- Industry Card -->
+                    <div class="bg-white border border-slate-200 shadow-sm p-6 rounded-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-emerald-50 text-emerald-600 text-[10px] font-mono px-2.5 py-1 rounded-bl-xl border-l border-b border-slate-200">
+                            Deep Tech
+                        </div>
+                        <div class="text-2xl mb-3">⚡</div>
+                        <h4 class="text-base font-bold text-slate-900 mb-2">Private Industry</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Translating theoretical research breakthroughs into live-field deployments. Industry pioneers like quantum algorithm leaders <span class="font-bold text-slate-800">Phasecraft</span> contribute real-world industrial constraints, operational data requirements, and scaling realities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Subsection 1: Organizing Committee (Dynamic Target) -->
+                <div class="mb-20">
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider font-mono">Subsection 01</span>
+                        <h3 class="text-xl font-bold text-slate-900">Organizing Committee</h3>
+                    </div>
+
+                    <div id="organizers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Dynamically filled by script -->
+                    </div>
+                </div>
+
+                <!-- Subsection 2: Confirmed Participants (Dynamic Target) -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider font-mono">Subsection 02</span>
+                        <h3 class="text-xl font-bold text-slate-900">Participants</h3>
+                    </div>
+
+                    <!-- 3 Columns for regional categories -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+                        <!-- United States Segment -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 border-b border-slate-200 pb-2">
+                                <img src="https://flagcdn.com/16x12/us.png" alt="US" class="rounded-sm flex-shrink-0">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">United States Category</h4>
+                            </div>
+                            <div id="us-participants-list" class="space-y-4">
+                                <!-- Dynamically filled by script -->
+                            </div>
+                        </div>
+
+                        <!-- Singapore Segment -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 border-b border-slate-200 pb-2">
+                                <img src="https://flagcdn.com/16x12/sg.png" alt="SG" class="rounded-sm flex-shrink-0">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">Singapore Category</h4>
+                            </div>
+                            <div id="sg-participants-list" class="space-y-4">
+                                <!-- Dynamically filled by script -->
+                            </div>
+                        </div>
+
+                        <!-- International Segment -->
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 border-b border-slate-200 pb-2">
+                                <span class="text-xs">🌍</span>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">International Category</h4>
+                            </div>
+                            <div id="intl-participants-list" class="space-y-4">
+                                <!-- Dynamically filled by script -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- ==============================================
+         VIEW 2: SEPARATE DETAILED AGENDA PAGE
+         ============================================== -->
+    <div id="view-agenda" class="hidden flex-1">
+        <!-- Agenda Hero Area -->
+        <section class="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+            <div class="relative max-w-5xl mx-auto text-center">
+                <span class="text-xs font-extrabold text-blue-400 uppercase tracking-widest block mb-2 font-mono">Interactive Schedule Planner</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">The Convening Blueprint</h2>
+                <p class="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
+                    A highly structured, outcome-driven agenda focused on active writing, peer evaluation, and multidisciplinary co-authoring blocks.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dynamic Agenda Filters / Search Panel -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+                <!-- Day Selectors -->
+                <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200 w-full md:w-auto">
+                    <button onclick="filterAgendaDay(1)" id="agenda-day1-btn" class="flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all">
+                        Day 1: Sept 17
+                    </button>
+                    <button onclick="filterAgendaDay(2)" id="agenda-day2-btn" class="flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all">
+                        Day 2: Sept 18
+                    </button>
+                </div>
+
+                <!-- Live Search and Session Filter Tabs -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto flex-1 justify-end">
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="agenda-search" oninput="searchSessions()" placeholder="Search schedule..." class="w-full text-xs pl-8 pr-4 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 bg-slate-50">
+                        <svg class="absolute left-2.5 top-3 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+
+                    <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200 w-full sm:w-auto">
+                        <button onclick="filterCategory('all')" id="cat-all" class="px-3 py-2 rounded-lg text-[10px] font-bold bg-white text-slate-950 transition-all">All</button>
+                        <button onclick="filterCategory('writing')" id="cat-writing" class="px-3 py-2 rounded-lg text-[10px] font-bold text-slate-600 hover:text-slate-950 transition-all">Writing</button>
+                        <button onclick="filterCategory('panel')" id="cat-panel" class="px-3 py-2 rounded-lg text-[10px] font-bold text-slate-600 hover:text-slate-950 transition-all">Panels</button>
+                        <button onclick="filterCategory('plenary')" id="cat-plenary" class="px-3 py-2 rounded-lg text-[10px] font-bold text-slate-600 hover:text-slate-950 transition-all">Plenary</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Flow / Details -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <!-- Toast notification container for interactive planner bookmark actions -->
+            <div id="planner-toast" class="hidden fixed bottom-6 right-6 bg-slate-900 text-white px-4 py-3 rounded-lg text-xs font-medium shadow-xl border border-slate-800 flex items-center gap-2 transition-all duration-300 z-50">
+                <span class="text-green-400">✔</span>
+                <span id="toast-message">Session bookmarked.</span>
+            </div>
+
+            <!-- Schedule Card Stack -->
+            <div id="timeline-container" class="space-y-4">
+                <!-- Timeline cards dynamically injected or toggled via script -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer System -->
+    <footer class="bg-slate-950 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white p-2 rounded font-bold text-sm tracking-tight flex items-center justify-center">
+                    R-CPIS
+                </div>
+                <div>
+                    <p class="text-slate-200 font-bold">US-Singapore R-CPIS Alliance</p>
+                    <p class="text-slate-500 mt-0.5">Part II: Washington D.C. convening September 17-18, 2026</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-6 text-slate-500">
+                <button onclick="switchView('overview')" class="hover:text-slate-300 transition-colors">Overview</button>
+                <span class="text-slate-800">|</span>
+                <button onclick="switchView('agenda')" class="hover:text-slate-300 transition-colors">Convening Agenda</button>
+                <span class="text-slate-800">|</span>
+                <a href="index.html" class="hover:text-slate-300 transition-colors">Part I: Singapore Recap</a>
+                <span class="text-slate-800">|</span>
+                <span>Supported by National Science Foundation (NSF)</span>
+                <span class="text-slate-800">|</span>
+                <span class="text-slate-500">&copy; 2026 R-CPIS Alliance. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Functionality -->
+    <script>
+
+        // Centralized Organizing Committee database with associated Profile Links
+        const organizersDb = [
+            {
+                initials: "CC",
+                name: "Dr. Cynthia Chen",
+                institution: "Univ. of Washington",
+                role: "Lead PI",
+                desc: "Specializes in real-time sensing, monitoring, and human-in-the-loop transit design.",
+                link: "https://www.ce.washington.edu/facultyfinder/cynthia-chen"
+            },
+            {
+                initials: "EMH",
+                name: "Dr. Elise Miller-Hooks",
+                institution: "George Mason Univ.",
+                role: "Local Host",
+                desc: "Expert in multi-infrastructure systems, network flows, and disaster logistics planning.",
+                link: "https://www.gmu.edu/profiles/miller"
+            },
+            {
+                initials: "YF",
+                name: "Dr. Yueyue Fan",
+                institution: "UC Davis",
+                role: "Co-PI",
+                desc: "Models complex transportation systems, grid load profiles, and network uncertainties.",
+                link: "https://faculty.engineering.ucdavis.edu/fan/"
+            },
+            {
+                initials: "TK",
+                name: "Dr. Tony Kuh",
+                institution: "Univ. of Hawaii",
+                role: "Co-PI",
+                desc: "Researches adaptive signal processing, smart grids, and international program setups.",
+                link: "http://www.ee.hawaii.edu/~kuh/info.html"
+            },
+            {
+                initials: "DL",
+                name: "Dr. Daan Liang",
+                institution: "Univ. of Alabama",
+                role: "Co-PI",
+                desc: "Focuses on wind engineering risk, severe disaster modelling, and infrastructure mitigation.",
+                link: "https://eng.ua.edu/eng-directory/dr-daan-liang/"
+            },
+            {
+                initials: "DC",
+                name: "Dr. David Corman",
+                institution: "Former NSF",
+                role: "Advisor",
+                desc: "Advises on national Cyber-Physical System (CPS) policy, funding structures, and agency linkages.",
+                link: ""
+            },
+            {
+                initials: "JJ",
+                name: "Dr. Jonas Joerin",
+                institution: "IARCS",
+                role: "Strategic Partner",
+                desc: "Oversees joint research management pathways between Illinois-Singapore entities.",
+                link: "https://frs.ethz.ch/people/management/JonasJoerin.html"
+            }
+        ];
+
+        // Centralized Confirmed Participants database (Categorized: "us", "sg", "international") with Profile Links
+        const participantsDb = [
+            {
+                category: "us",
+                name: "Dr. Aranya Chakrabortty",
+                institution: "North Carolina State University",
+                desc: "Control theory and optimization with applications to large-scale electric power systems, PMU/Synchrophasors telemetry, and cyber-security integrations.",
+                link: "https://achakra2.wordpress.ncsu.edu/"
+            },
+            {
+                category: "us",
+                name: "Dr. Cathy Wu",
+                institution: "Massachusetts Institute of Technology",
+                desc: "Machine learning, optimization, and control theory applied to mixed autonomy mobility networks and urban critical architectures.",
+                link: "http://www.wucathy.com/"
+            },
+            {
+                category: "sg",
+                name: "Dr. Qiang Meng",
+                institution: "National University of Singapore",
+                desc: "Urban mobility modelling and optimization; analysis of shipping logistics and quantitative risk assessment (QRA) of transport hubs.",
+                link: "https://cde.nus.edu.sg/cee/staff/meng-qiang/"
+            },
+            {
+                category: "sg",
+                name: "Dr. Lihua Xie",
+                institution: "Nanyang Technological University",
+                desc: "Robust control, networked sensor systems, multi-agent communication networks, and adaptive telemetry design for unmanned vehicles.",
+                link: "https://dr.ntu.edu.sg/entities/person/Xie-Lihua"
+            },
+            {
+                category: "international",
+                name: "Dr. Toshiyuki Yamamoto",
+                institution: "Nagoya University (Japan)",
+                desc: "ITS technologies for environmentally sustainable transport, household vehicle ownership modeling, and safety parameters of automated traffic flows.",
+                link: "https://www.trans.civil.nagoya-u.ac.jp/~yamamoto/"
+            },
+            {
+                category: "international",
+                name: "Dr. Michael Bell",
+                institution: "University of Sydney (Australia)",
+                desc: "Ports and maritime logistics optimization, transport network modelling under extreme disruptions, and cyber-intelligent transport systems.",
+                link: "https://www.sydney.edu.au/business/about/our-people/academic-staff/michael.bell.html"
+            }
+        ];
+
+        // Core Pillars Content Matrix
+        const pillars = {
+            1: {
+                badge: "Pillar 1 Scope",
+                title: "Quantum Engineering for Infrastructure Systems",
+                desc: "Quantum sensors will allow us to measure real-time micro-stresses on bridges, underground water pipelines, and power substations at precision rates previously unimaginable. Concurrently, developing scalable algorithms on upcoming quantum computers prepares our grid operations to dynamic optimization protocols even during total regional signal failures.",
+                questions: [
+                    "How can quantum key distribution (QKD) be scaled cheaply to secure operational technology networks?",
+                    "What are the constraints of current-generation NISQ computers for complex load-balancing simulations?"
+                ]
+            },
+            2: {
+                badge: "Pillar 2 Scope",
+                title: "Resilience Red Teaming",
+                desc: "Instead of classical security modeling, resilience red teaming focuses on adversarial stress testing. By using virtual Digital Twins of complex networks (water, logistics, energy), we deploy automated attack models designed to search for hidden single-points-of-failure and unexpected cascading triggers.",
+                questions: [
+                    "How can AI-driven digital twins model regulatory and logistical cascading failures accurately?",
+                    "What is the liability framework for applying algorithmic stress testing to real-world SCADA systems?"
+                ]
+            },
+            3: {
+                badge: "Pillar 3 Scope",
+                title: "Unconventional & Nature-Based Solutions",
+                desc: "Unconventional adaptations shift from heavy rigid barriers (like concrete dikes) to dynamic natural-artificial hybrid platforms. By tracking nature-based solutions using IoT sensors and automated drones, we combine natural resilience parameters with continuous digital oversight.",
+                questions: [
+                    "How can nature-based barrier structures be telemetry-enabled to report structural stability in real-time?",
+                    "What is the economic evaluation system comparing long-term biological protection with legacy steel/concrete barriers?"
+                ]
+            }
+        };
+
+        // Complete Structured Day 1 & Day 2 Schedule Database
+        const scheduleDb = [
+            {
+                id: "s1",
+                day: 1,
+                time: "08:30 - 09:15",
+                title: "Registration & Academic Briefing",
+                desc: "Arrival, credential pickup, and coffee at the George Mason University Mason Square Hall. Initial distribution of co-author assignments.",
+                location: "Mason Square Hall",
+                category: "plenary",
+                details: "All credentialed invitees must register physically to access the cloud-backed shared roadmap document environments."
+            },
+            {
+                id: "s2",
+                day: 1,
+                time: "09:15 - 10:30",
+                title: "Briefing: Outcomes of the Singapore Convenor",
+                desc: "Review and contextual transition of core results obtained during the Singapore Workshop (March 18-19, 2026), identifying roadmap gaps.",
+                location: "Plenary Hall A",
+                category: "plenary",
+                details: "Session highlights gaps in multi-system coupling metrics and sets the stage for technology and ecological drivers."
+            },
+            {
+                id: "s3",
+                day: 1,
+                time: "10:45 - 12:30",
+                title: "Drafting Task Force I: Advanced Tech Foundations",
+                desc: "First active co-authoring workshop focusing on Quantum Engineering systems, NISQ computer constraints, and SCADA cybersecurity.",
+                location: "Breakout Room 102",
+                category: "writing",
+                details: "Output objective: Draft Chapter 1 initial structural outline, defining standardized metrics for quantum-level infrastructure telemetry."
+            },
+            {
+                id: "s4",
+                day: 1,
+                time: "13:30 - 15:30",
+                title: "Panel: Federal Strategy & Private Intersections",
+                desc: "Federal strategy projections led by program directors from NSF, USDOT, NIST, and deep-tech pioneer leaders from Phasecraft.",
+                location: "Plenary Hall A",
+                category: "panel",
+                details: "Discussion centers on private industry collaboration pathways, licensing, and national funding mandates."
+            },
+            {
+                id: "s5",
+                day: 1,
+                time: "15:45 - 17:30",
+                title: "Drafting Task Force II: Resilience Red Teaming",
+                desc: "Working group sessions outlining methodologies for zero-impact stress tests on physical systems using digital twin environments.",
+                location: "Breakout Room 104",
+                category: "writing",
+                details: "Output objective: Formulation of standardized hazard matrices for cyber-attacks concurrent with extreme weather events."
+            },
+            {
+                id: "s6",
+                day: 2,
+                time: "09:00 - 10:30",
+                title: "Drafting Task Force III: Unconventional & Nature-Based Solutions",
+                desc: "Working group addressing physical-ecological integrations, combining natural systems with real-time digital sensor networks.",
+                location: "Breakout Room 108",
+                category: "writing",
+                details: "Output objective: Draft metrics comparing biological coastal protections with legacy concrete/steel infrastructures."
+            },
+            {
+                id: "s7",
+                day: 2,
+                time: "11:00 - 13:00",
+                title: "Consolidation and Structural Review",
+                desc: "Joint plenary evaluation where task-force co-leads align chapter drafts, checking cross-system interdependencies.",
+                location: "Plenary Hall A",
+                category: "plenary",
+                details: "A critical peer-review session ensuring consistency across quantum, red-teaming, and ecological domains."
+            },
+            {
+                id: "s8",
+                day: 2,
+                time: "14:00 - 16:30",
+                title: "The R-CPIS Roadmap Synthesis",
+                desc: "Final formatting, mapping out post-workshop publication milestones, and allocating chapter review responsibilities.",
+                location: "Mason Square Hall",
+                category: "writing",
+                details: "Final integration of files to compile the primary federal research prospectus outline."
+            },
+            {
+                id: "s9",
+                day: 2,
+                time: "16:30 - 17:00",
+                title: "Official Adjournment & Next Steps",
+                desc: "Concluding remarks from Principal Investigators and observers from NSF, establishing the post-workshop review schedule.",
+                location: "Plenary Hall A",
+                category: "plenary",
+                details: "Formal delivery parameters assigned for the initial roadmap release draft."
+            }
+        ];
+
+        // Render dynamic Organizers grid in light mode with conditionally-rendered Profile Links
+        function renderOrganizers() {
+            const container = document.getElementById('organizers-grid');
+            if (!container) return;
+            container.innerHTML = organizersDb.map(org => `
+                <div class="bg-white border border-slate-200 p-5 rounded-xl transition-all hover:border-slate-300 hover:shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-800 font-mono text-sm font-bold flex items-center justify-center flex-shrink-0">
+                                ${org.initials}
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">${org.name}</h4>
+                                <p class="text-[11px] text-slate-500">${org.institution} (${org.role})</p>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-slate-600 leading-relaxed">
+                            ${org.desc}
+                        </p>
+                    </div>
+                    ${org.link ? `
+                        <div class="mt-4 pt-2 border-t border-slate-100 flex justify-end">
+                            <a href="${org.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                                Profile →
+                            </a>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        // Render dynamic Confirmed Participants list in light mode with Profile Links
+        function renderParticipants() {
+            const categories = ["us", "sg", "international"];
+            
+            categories.forEach(cat => {
+                const elementId = cat === "international" ? "intl-participants-list" : `${cat}-participants-list`;
+                const container = document.getElementById(elementId);
+                if (!container) return;
+
+                // Filter database items matching target category
+                const filtered = participantsDb.filter(p => p.category === cat);
+
+                container.innerHTML = filtered.map(p => `
+                    <div class="bg-white border border-slate-200 p-5 rounded-xl hover:border-slate-300 hover:shadow-sm transition-all flex flex-col justify-between min-h-[160px]">
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-900 mb-0.5">${p.name}</h5>
+                            <span class="text-[10px] text-blue-600 font-medium block mb-2">${p.institution}</span>
+                            <p class="text-[11px] text-slate-600 leading-relaxed">
+                                ${p.desc}
+                            </p>
+                        </div>
+                        ${p.link ? `
+                            <div class="mt-4 pt-2 border-t border-slate-100 flex justify-end">
+                                <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                                    Profile →
+                                </a>
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+            });
+        }
+
+        // Current Page/View State Controller
+        let currentView = 'overview';
+        let agendaActiveDay = 1;
+        let agendaCategoryFilter = 'all';
+        let searchQuery = '';
+        const favorites = new Set();
+
+        // Switch visible "Page" SPA-style
+        function switchView(viewId) {
+            currentView = viewId;
+            const viewOverview = document.getElementById('view-overview');
+            const viewAgenda = document.getElementById('view-agenda');
+            const navOverview = document.getElementById('nav-overview');
+            const navAgenda = document.getElementById('nav-agenda');
+
+            if (viewId === 'overview') {
+                viewOverview.classList.remove('hidden');
+                viewAgenda.classList.add('hidden');
+                
+                // Set nav buttons classes
+                navOverview.className = "px-5 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all flex items-center gap-2";
+                navAgenda.className = "px-5 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all flex items-center gap-2";
+            } else {
+                viewOverview.classList.add('hidden');
+                viewAgenda.classList.remove('hidden');
+                
+                navOverview.className = "px-5 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all flex items-center gap-2";
+                navAgenda.className = "px-5 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all flex items-center gap-2";
+                
+                // Initialize/Render Detailed Schedule View
+                renderAgendaTimeline();
+            }
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+
+        // Toggle mobile menu visibility
+        function toggleMobileNav() {
+            const menu = document.getElementById('mobile-nav');
+            menu.classList.toggle('hidden');
+        }
+
+        // Agenda filter controls
+        function filterAgendaDay(day) {
+            agendaActiveDay = day;
+            const btn1 = document.getElementById('agenda-day1-btn');
+            const btn2 = document.getElementById('agenda-day2-btn');
+
+            if (day === 1) {
+                btn1.className = "flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all";
+                btn2.className = "flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all";
+            } else {
+                btn2.className = "flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all";
+                btn1.className = "flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all";
+            }
+            renderAgendaTimeline();
+        }
+
+        function filterCategory(catId) {
+            agendaCategoryFilter = catId;
+            const cats = ['all', 'writing', 'panel', 'plenary'];
+            cats.forEach(c => {
+                const el = document.getElementById(`cat-${c}`);
+                if (c === catId) {
+                    el.className = "px-3 py-2 rounded-lg text-[10px] font-bold bg-white text-slate-950 transition-all";
+                } else {
+                    el.className = "px-3 py-2 rounded-lg text-[10px] font-bold text-slate-600 hover:text-slate-950 transition-all";
+                }
+            });
+            renderAgendaTimeline();
+        }
+
+        function searchSessions() {
+            searchQuery = document.getElementById('agenda-search').value.toLowerCase();
+            renderAgendaTimeline();
+        }
+
+        // Bookmark session state
+        function toggleBookmark(sessionId) {
+            if (favorites.has(sessionId)) {
+                favorites.delete(sessionId);
+                showToast("Session removed from personal tracker.");
+            } else {
+                favorites.add(sessionId);
+                showToast("Session bookmarked in personal tracker.");
+            }
+            renderAgendaTimeline();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('planner-toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function toggleSessionDetails(sessionId) {
+            const detailPanel = document.getElementById(`details-${sessionId}`);
+            const chevron = document.getElementById(`chevron-${sessionId}`);
+            detailPanel.classList.toggle('hidden');
+            chevron.classList.toggle('rotate-180');
+        }
+
+        // Dynamic schedule timeline renderer
+        function renderAgendaTimeline() {
+            const container = document.getElementById('timeline-container');
+            container.innerHTML = '';
+
+            // Filter schedule array
+            const filtered = scheduleDb.filter(item => {
+                const matchesDay = item.day === agendaActiveDay;
+                const matchesCategory = agendaCategoryFilter === 'all' || item.category === agendaCategoryFilter;
+                const matchesSearch = item.title.toLowerCase().includes(searchQuery) || 
+                                      item.desc.toLowerCase().includes(searchQuery) ||
+                                      item.location.toLowerCase().includes(searchQuery);
+                return matchesDay && matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-500 text-xs">
+                        No sessions matched your criteria. Try resetting the filters.
+                    </div>
+                `;
+                return;
+            }
+
+            // Generate timeline elements
+            filtered.forEach(item => {
+                const categoryLabels = {
+                    writing: { text: "Breakout Writing", bg: "bg-amber-50 text-amber-700 border-amber-200" },
+                    panel: { text: "Panel Discussion", bg: "bg-purple-50 text-purple-700 border-purple-200" },
+                    plenary: { text: "Plenary Session", bg: "bg-blue-50 text-blue-700 border-blue-200" }
+                };
+
+                const isFav = favorites.has(item.id);
+                const label = categoryLabels[item.category] || { text: "General", bg: "bg-slate-50 text-slate-700 border-slate-200" };
+
+                const cardHtml = `
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:border-slate-300">
+                        <div class="p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <!-- Time & Topic -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-24 sm:w-28 flex-shrink-0">
+                                    <span class="mono text-xs font-bold bg-slate-100 text-slate-700 px-2.5 py-1 rounded inline-block">
+                                        ${item.time}
+                                    </span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span class="text-[10px] font-bold border px-2 py-0.5 rounded-full ${label.bg}">
+                                            ${label.text}
+                                        </span>
+                                        <span class="text-xs font-medium text-slate-500 bg-slate-50 border border-slate-100 px-2 py-0.5 rounded-full flex items-center gap-1">
+                                            🏢 ${item.location}
+                                        </span>
+                                    </div>
+                                    <h4 class="text-base font-bold text-slate-950 mt-1.5">${item.title}</h4>
+                                    <p class="text-xs text-slate-500 mt-1 leading-relaxed">${item.desc}</p>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Session Actions -->
+                            <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                                <!-- Bookmark Toggle -->
+                                <button onclick="toggleBookmark('${item.id}')" class="p-2 border rounded-lg transition-all text-xs font-semibold ${isFav ? 'bg-blue-50 border-blue-200 text-blue-600' : 'bg-white border-slate-200 text-slate-400 hover:text-slate-600'} flex items-center gap-1.5" title="Pin Session to Personal Schedule">
+                                    <svg class="w-4 h-4 ${isFav ? 'fill-blue-600' : 'fill-none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                                    <span class="sm:hidden text-[11px]">${isFav ? 'Favorited' : 'Bookmark'}</span>
+                                </button>
+
+                                <!-- Details Expand Toggle -->
+                                <button onclick="toggleSessionDetails('${item.id}')" class="text-[11px] font-bold text-slate-600 hover:text-slate-900 flex items-center gap-1">
+                                    <span>Details</span>
+                                    <svg id="chevron-${item.id}" class="w-3.5 h-3.5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown panel showing expanded metadata -->
+                        <div id="details-${item.id}" class="hidden bg-slate-50 border-t border-slate-100 px-5 py-4 text-xs text-slate-600 leading-relaxed">
+                            <strong class="font-bold text-slate-800 block mb-1">Session Target Deliverables:</strong>
+                            <p>${item.details}</p>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHtml;
+            });
+        }
+
+        // Interactive Theme Pillar Toggle logic
+        function selectPillar(id) {
+            // Highlight Selected button, reset others
+            for (let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`pillar-btn-${i}`);
+                const num = document.getElementById(`pillar-num-${i}`);
+                if (i === id) {
+                    btn.className = "cursor-pointer bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm transition-all duration-200";
+                    if (num) num.className = "bg-blue-100 text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold";
+                } else {
+                    btn.className = "cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200";
+                    if (num) num.className = "bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold";
+                }
+            }
+
+            // Update Right Side Info Card content
+            const data = pillars[id];
+            document.getElementById('display-badge').innerText = data.badge;
+            document.getElementById('display-title').innerText = data.title;
+            document.getElementById('display-desc').innerText = data.desc;
+
+            // Generate questions
+            const qList = document.getElementById('display-questions');
+            qList.innerHTML = '';
+            data.questions.forEach(q => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-2';
+                li.innerHTML = `<span class="text-blue-400 font-bold">•</span><span>${q}</span>`;
+                qList.appendChild(li);
+            });
+        }
+
+        // Initialize state on window loaded
+        window.onload = function() {
+            // Render organizers and participants dynamically
+            renderOrganizers();
+            renderParticipants();
+
+            // Setup default view state
+            switchView('overview');
+        };
+    </script>
+</body>
+</html>

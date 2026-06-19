@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd US-Singapore R-CPIS Workshop | Washington D.C.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        /* Custom scrollbar for professional look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+
+    <!-- Top Banner: Strategic Context -->
+    <div class="bg-slate-900 text-slate-300 py-2.5 px-4 text-center text-xs font-medium border-b border-slate-800 tracking-wider">
+        <span class="bg-blue-500/10 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded mr-2 uppercase text-[10px]">NSF Supported</span>
+        Part II: Washington D.C. Research Convening — Focused Roadmapping Session
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white p-2.5 rounded-lg font-bold text-xl tracking-tight flex items-center justify-center">
+                    <span class="text-blue-500">R</span>
+                    <span class="text-slate-400 font-normal mx-0.5">|</span>
+                    <span>CPIS</span>
+                </div>
+                <div>
+                    <h1 class="text-sm font-bold text-slate-900 uppercase tracking-wider leading-none">US-Singapore Alliance</h1>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Research Alliance on Complex Cyber-Physical Infrastructure Systems</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-slate-900 transition-colors">Context</a>
+                <a href="#themes" class="hover:text-slate-900 transition-colors">Core Themes</a>
+                <a href="#agenda" class="hover:text-slate-900 transition-colors">Agenda</a>
+                <a href="#participants" class="hover:text-slate-900 transition-colors">Cohort</a>
+                <a href="#roadmap" class="hover:text-slate-900 transition-colors">Roadmap Tracker</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 border border-slate-200 px-3.5 py-2 rounded-lg transition-all bg-slate-50">
+                    <span>← Part I: Singapore</span>
+                </a>
+                <a href="#nominate" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-xs font-semibold transition-all shadow-sm shadow-blue-500/10">
+                    Request Invitation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 px-3 py-1 rounded-full text-xs text-slate-300 mb-6 backdrop-blur">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span>September 17-18, 2026</span>
+                <span class="text-slate-500">•</span>
+                <span>George Mason University (Washington D.C. Area)</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Resilience of Complex Cyber-Physical <br class="hidden lg:block">
+                Infrastructure Systems in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-400">Era of AI</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+                An invitation-only, output-driven roadmap workshop addressing technology acceleration (AI, Quantum, Robotics) and systemic threat escalation (natural & anthropogenic hazards).
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#roadmap" class="w-full sm:w-auto bg-white text-slate-950 hover:bg-slate-100 px-6 py-3.5 rounded-lg text-sm font-semibold transition-all">
+                    Explore Roadmap Scope
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-slate-800/80 border border-slate-700 hover:bg-slate-800 text-slate-300 px-6 py-3.5 rounded-lg text-sm font-semibold transition-all">
+                    Read Executive Focus
+                </a>
+            </div>
+
+            <!-- Stats/Context Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-8 border-t border-slate-800/80 text-left">
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Scale</p>
+                    <p class="text-2xl font-bold text-white mt-1">30–40</p>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Selected Experts Only</p>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Format</p>
+                    <p class="text-2xl font-bold text-white mt-1">Focused</p>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Active Writing Breakouts</p>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Objective</p>
+                    <p class="text-2xl font-bold text-sky-400 mt-1">Roadmap</p>
+                    <p class="text-[11px] text-slate-500 mt-0.5">NSF-Singapore Research</p>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Predecessor</p>
+                    <a href="index.html" class="group text-2xl font-bold text-white mt-1 flex items-center gap-1 hover:text-blue-400 transition-colors">
+                        Singapore
+                        <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-400 transform group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Held March 18-19, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Driver Segment -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5">
+                <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">The Strategic Mandate</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Why a Second, More Focused Workshop?
+                </h2>
+                <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                    While the initial convening in Singapore mapping out the generalized theoretical frameworks of US-Singapore R-CPIS cooperation, the D.C. follow-up demands actionable specificity. We converge at a historical juncture governed by two accelerating trends:
+                </p>
+                
+                <div class="mt-6 p-4 rounded-xl border border-amber-200 bg-amber-50/50 flex gap-3 text-xs text-amber-800 leading-relaxed">
+                    <span class="text-lg">💡</span>
+                    <div>
+                        <strong class="font-semibold block mb-0.5">Roadmap Objective:</strong>
+                        The sole deliverable of this invite-only session is the compilation of a high-impact research prospectus directing collaborative cross-border research funding on infrastructure survivability.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual comparison of the two intersecting drivers -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Trend Card 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                    <span class="mono text-slate-400 text-xs font-bold">ACCELERATION 01</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Disruptive Technologies</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Rapid convergence of quantum engineering, decentralized autonomous robotics, and agentic AI. These offer breakthrough protective capabilities while simultaneously presenting unprecedented system vulnerability surfaces.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-[11px] text-slate-500 font-medium">
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-blue-500">✓</span> Quantum optimization algorithms
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-blue-500">✓</span> Autonomous physical repairs
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-blue-500">✓</span> Generative cyber-security barriers
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trend Card 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-red-500"></div>
+                    <span class="mono text-slate-400 text-xs font-bold">ACCELERATION 02</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-3 mb-2">Compounding Hazards</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Increasing frequency, severity, and cascading correlation of natural disasters (extreme climate events) and artificial, coordinated threat vectors (state-sponsored cyber assaults, complex physical sabotage).
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-[11px] text-slate-500 font-medium">
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-red-500">⚠</span> Concurrent black-sky incidents
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-red-500">⚠</span> Trans-boundary dependencies
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="text-red-500">⚠</span> Fast-developing system failures
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Workshop Themes -->
+    <section id="themes" class="bg-slate-100 py-20 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">Scientific Domains</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Focus Areas & Technical Pillars
+                </h2>
+                <p class="mt-3 text-slate-600 text-sm">
+                    Rather than a broad disciplinary survey, the D.C. convening focuses heavily on three critical, cutting-edge intersections of security and engineering.
+                </p>
+            </div>
+
+            <!-- Interative Theme Layout with dynamic side pane -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Hand Selectors (3 Pillars) -->
+                <div class="lg:col-span-7 space-y-4">
+                    <!-- Pillar 1 -->
+                    <div id="pillar-btn-1" onclick="selectPillar(1)" class="cursor-pointer bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm transition-all duration-200">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-blue-100 text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold">1</span>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-950">Quantum Engineering for Infrastructure Systems</h3>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Leveraging quantum sensors for preemptive material decay detection and quantum computing paradigms to simulate extremely complex, high-dimensional failure dynamics.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div id="pillar-btn-2" onclick="selectPillar(2)" class="cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-2">2</span>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-950">Resilience Red Teaming</h3>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Constructing systematic adversarial framework models designed to aggressively exploit hidden inter-dependencies, validating digital twins, and assessing dynamic failover configurations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div id="pillar-btn-3" onclick="selectPillar(3)" class="cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200">
+                        <div class="flex items-start gap-4">
+                            <span class="bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-3">3</span>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-950">Unconventional & Nature-Based Solutions</h3>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Blending ecological infrastructure adaptations (nature-based barriers, bio-mimetic structures) with cyber-physical telemetry to build resilient hybrid protective mechanisms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hand Info card: Dynamic content based on clicked pillar -->
+                <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-8 border border-slate-800 shadow-xl min-h-[420px] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span id="display-badge" class="bg-blue-500/10 text-blue-400 border border-blue-500/30 px-3 py-1 rounded text-[11px] font-mono uppercase tracking-widest">
+                                Pillar 1 Scope
+                            </span>
+                            <span class="text-slate-500 text-xs font-mono">US-SG R-CPIS Alliance</span>
+                        </div>
+                        
+                        <h4 id="display-title" class="text-2xl font-bold tracking-tight mb-4 text-white">
+                            Quantum Engineering
+                        </h4>
+                        
+                        <p id="display-desc" class="text-xs text-slate-300 leading-relaxed mb-6">
+                            Quantum sensors will allow us to measure real-time micro-stresses on bridges, underground water pipelines, and power substations at precision rates previously unimaginable. Concurrently, developing scalable algorithms on upcoming quantum computers prepares our grid operations to dynamic optimization protocols even during total regional signal failures.
+                        </p>
+
+                        <div class="bg-slate-800/80 border border-slate-700/80 p-4 rounded-xl">
+                            <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider mb-2">Key Roadmap Chapter Questions:</span>
+                            <ul id="display-questions" class="space-y-2 text-xs text-slate-200">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-400 font-bold">•</span>
+                                    <span>How can quantum key distribution (QKD) be scaled cheaply to secure operational technology networks?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-400 font-bold">•</span>
+                                    <span>What are the constraints of current-generation NISQ computers for complex load-balancing simulations?</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                        <span>Lead Rapporteur Target</span>
+                        <span class="text-white font-semibold">1 Industry Leader & 2 Academics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Structured Schedule/Agenda -->
+    <section id="agenda" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">The Convening Blueprint</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Output-Focused Workshop Schedule
+                </h2>
+                <p class="mt-2 text-slate-600 text-sm max-w-2xl">
+                    To deliver a concrete, publishing-ready research roadmap, this two-day workshop emphasizes intensive task-force sessions over traditional didactic speeches.
+                </p>
+            </div>
+            
+            <!-- Agenda Selector -->
+            <div class="flex gap-2 mt-6 md:mt-0 bg-slate-100 p-1 rounded-xl border border-slate-200">
+                <button onclick="toggleDay(1)" id="day1-btn" class="px-5 py-2 rounded-lg text-xs font-semibold bg-white text-slate-950 shadow-sm transition-all">
+                    Day 1: Sept 17
+                </button>
+                <button onclick="toggleDay(2)" id="day2-btn" class="px-5 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">
+                    Day 2: Sept 18
+                </button>
+            </div>
+        </div>
+
+        <!-- Day 1 Schedule -->
+        <div id="day1-content" class="space-y-4">
+            <!-- Event Item 1 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">08:30 - 09:15</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Registration & Academic Briefing</h4>
+                    <p class="text-xs text-slate-500 mt-1">Briefing at George Mason University (Washington D.C. Area Campus). Opening address outlining Roadmap expectations.</p>
+                </div>
+                <div class="text-xs font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100">
+                    Mason Square Hall
+                </div>
+            </div>
+
+            <!-- Event Item 2 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">09:15 - 10:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Briefing: Outcomes of the Singapore Convener</h4>
+                    <p class="text-xs text-slate-500 mt-1">Recap of conclusions from Singapore Workshop (March 2026), identification of research taxonomy gaps, and transition to focused theme execution.</p>
+                </div>
+                <div class="text-xs font-medium text-blue-600 bg-blue-50/50 px-3 py-1.5 rounded-lg border border-blue-100/50">
+                    Plenary Session
+                </div>
+            </div>
+
+            <!-- Event Item 3 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-blue-500 text-white px-2.5 py-1 rounded">10:45 - 12:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Drafting Task Force I: Advanced Tech Foundations</h4>
+                    <p class="text-xs text-slate-500 mt-1">First active drafting session. Focus on integrating Quantum Computing and Artificial Intelligence models for system state predictions.</p>
+                </div>
+                <div class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-100">
+                    Breakout Writing
+                </div>
+            </div>
+
+            <!-- Event Item 4 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">13:30 - 15:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Panel: Federal Strategy & Private Intersections</h4>
+                    <p class="text-xs text-slate-500 mt-1">Presentations and moderated discussion with NSF, USDOT, NIST directors, and Phasecraft leadership regarding actual deployment targets.</p>
+                </div>
+                <div class="text-xs font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100">
+                    Gov-Industry Panel
+                </div>
+            </div>
+
+            <!-- Event Item 5 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-blue-500 text-white px-2.5 py-1 rounded">15:45 - 17:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Drafting Task Force II: Resilience Red Teaming</h4>
+                    <p class="text-xs text-slate-500 mt-1">Developing unified paradigms for testing critical infrastructures through simulated, adversarial AI models without physical shutdown risks.</p>
+                </div>
+                <div class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-100">
+                    Breakout Writing
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 Schedule (Hidden initially) -->
+        <div id="day2-content" class="space-y-4 hidden">
+            <!-- Event Item 1 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">09:00 - 10:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Drafting Task Force III: Unconventional & Nature-Based Solutions</h4>
+                    <p class="text-xs text-slate-500 mt-1">Exploring bio-mimetic systems, natural-artificial hybrid defenses, and real-time sensor integration protocols.</p>
+                </div>
+                <div class="text-xs font-medium text-amber-600 bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-100">
+                    Breakout Writing
+                </div>
+            </div>
+
+            <!-- Event Item 2 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-blue-500 text-white px-2.5 py-1 rounded">11:00 - 13:00</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Consolidation and Structural Review</h4>
+                    <p class="text-xs text-slate-500 mt-1">Cross-pillar critical evaluations. Representatives from each of the three themes present drafted chapters for mutual optimization.</p>
+                </div>
+                <div class="text-xs font-medium text-blue-600 bg-blue-50/50 px-3 py-1.5 rounded-lg border border-blue-100/50">
+                    Joint Review
+                </div>
+            </div>
+
+            <!-- Event Item 3 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">14:00 - 16:30</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">The R-CPIS Roadmap Synthesis</h4>
+                    <p class="text-xs text-slate-500 mt-1">Final formatting, timeline mapping, drafting funding recommendations, and assignment of specific publication chapter leads.</p>
+                </div>
+                <div class="text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">
+                    Final Synthesis
+                </div>
+            </div>
+
+            <!-- Event Item 4 -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-4 transition-all hover:border-slate-300">
+                <div class="md:w-36 flex-shrink-0">
+                    <span class="mono text-xs font-semibold bg-slate-900 text-white px-2.5 py-1 rounded">16:30 - 17:00</span>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-base font-bold text-slate-950">Official Adjournment & Next Steps</h4>
+                    <p class="text-xs text-slate-500 mt-1">Closing statements from Principal Investigators and NSF observers. Post-workshop timeline outlining formal publishing sequence.</p>
+                </div>
+                <div class="text-xs font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100">
+                    Closing Session
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Participant Cohort Target Module -->
+    <section id="participants" class="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Cohort details text -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-extrabold text-blue-400 uppercase tracking-widest block mb-2">Selected Invitees</span>
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">
+                        Elite Core Target Cohort
+                    </h2>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">
+                        To maintain intense collaborative output, the D.C. convening is strictly capped at **30–40 active participants**. This small footprint guarantees detailed, comprehensive scientific contributions from every single attendee.
+                    </p>
+
+                    <!-- Interactive cohort visualization metric info -->
+                    <div class="mt-8 space-y-4">
+                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/80">
+                            <div class="flex justify-between text-xs font-mono text-slate-300 mb-1.5">
+                                <span>Academic Researchers</span>
+                                <span>~50%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full w-1/2"></div>
+                            </div>
+                            <span class="text-[11px] text-slate-500 mt-1 block">~20 Selected international scholars specializing in complex cyber-physical networks.</span>
+                        </div>
+
+                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/80">
+                            <div class="flex justify-between text-xs font-mono text-slate-300 mb-1.5">
+                                <span>Government Authorities & Agencies</span>
+                                <span>~30%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                                <div class="bg-indigo-400 h-full w-[30%]"></div>
+                            </div>
+                            <span class="text-[11px] text-slate-500 mt-1 block">Key decision-makers and sponsors representing the NSF, USDOT, and NIST.</span>
+                        </div>
+
+                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/80">
+                            <div class="flex justify-between text-xs font-mono text-slate-300 mb-1.5">
+                                <span>Deep-Tech Core Industry</span>
+                                <span>~20%</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                                <div class="bg-sky-400 h-full w-[20%]"></div>
+                            </div>
+                            <span class="text-[11px] text-slate-500 mt-1 block">Private engineering and computing giants including Phasecraft and relevant system operators.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Cohort Grid / Card visual representation -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl relative">
+                        <h3 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-6">Target Institutional Representation</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Agency 1 -->
+                            <div class="p-4 rounded-xl border border-slate-700/50 bg-slate-850 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
+                                    NSF
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">National Science Foundation</h4>
+                                    <p class="text-[10px] text-slate-400 mt-0.5">Sponsor & Director Observers</p>
+                                </div>
+                            </div>
+
+                            <!-- Agency 2 -->
+                            <div class="p-4 rounded-xl border border-slate-700/50 bg-slate-850 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
+                                    DOT
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">USDOT</h4>
+                                    <p class="text-[10px] text-slate-400 mt-0.5">U.S. Department of Transportation</p>
+                                </div>
+                            </div>
+
+                            <!-- Agency 3 -->
+                            <div class="p-4 rounded-xl border border-slate-700/50 bg-slate-850 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
+                                    NIST
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">NIST</h4>
+                                    <p class="text-[10px] text-slate-400 mt-0.5">National Inst. of Standards & Tech</p>
+                                </div>
+                            </div>
+
+                            <!-- Partner 4 -->
+                            <div class="p-4 rounded-xl border border-slate-700/50 bg-slate-850 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
+                                    PC
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Phasecraft</h4>
+                                    <p class="text-[10px] text-slate-400 mt-0.5">Quantum Algorithm Pioneers</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info badge -->
+                        <div class="mt-6 text-center">
+                            <span class="inline-flex text-[10px] uppercase font-mono text-slate-500 bg-slate-900/60 px-4 py-1.5 rounded-full border border-slate-800">
+                                🔒 Invitation Protocol Enforced
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Interactive Research Roadmap Blueprint Builder -->
+    <section id="roadmap" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2">Deliverable Architecture</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                The Core Deliverable: Research Roadmap
+            </h2>
+            <p class="mt-3 text-slate-600 text-sm">
+                Explore the structural chapters targeted for drafting during the September sessions. Select any chapter to visualize the targeted progress metric and active focus.
+            </p>
+        </div>
+
+        <!-- Interactive Roadmap UI -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Chapter 1 -->
+            <div id="road-ch1" class="bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm relative cursor-pointer" onclick="setActiveChapter(1)">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold text-blue-600 font-mono uppercase bg-blue-50 px-2 py-0.5 rounded">Chapter 01</span>
+                    <span class="text-xs text-slate-400 font-medium">Progress: 15%</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-950 mb-2">Systems Level Diagnostics</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Drafting mathematical models linking quantum network optimizations directly to legacy industrial control platforms.
+                </p>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                    <div class="bg-blue-500 h-full w-[15%]"></div>
+                </div>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div id="road-ch2" class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative cursor-pointer hover:border-slate-300" onclick="setActiveChapter(2)">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold text-slate-500 font-mono uppercase bg-slate-100 px-2 py-0.5 rounded" id="road-badge-2">Chapter 02</span>
+                    <span class="text-xs text-slate-400 font-medium">Progress: 5%</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-950 mb-2">Adversarial Red Team Protocol</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Formulating standardized cyber-physical simulation models to perform zero-impact failure stresses on simulated infrastructure twins.
+                </p>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                    <div class="bg-slate-400 h-full w-[5%]" id="road-bar-2"></div>
+                </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div id="road-ch3" class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative cursor-pointer hover:border-slate-300" onclick="setActiveChapter(3)">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold text-slate-500 font-mono uppercase bg-slate-100 px-2 py-0.5 rounded" id="road-badge-3">Chapter 03</span>
+                    <span class="text-xs text-slate-400 font-medium">Progress: 10%</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-950 mb-2">Eco-Infrastructure Integration</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Establishing formal guidelines for integrating physical nature-based protections (such as barrier reefs or smart soils) with digital sensor telemetry.
+                </p>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                    <div class="bg-slate-400 h-full w-[10%]" id="road-bar-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roadmap Interactive Panel Output details -->
+        <div class="bg-slate-950 text-white rounded-xl p-8 mt-8 border border-slate-800">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <h3 id="panel-title" class="text-xl font-bold">Chapter 01 Working Session Blueprint</h3>
+                    <p class="text-xs text-slate-400 mt-1">Status: Initial Outline Scoped • Drafting Session Scheduled for Day 1 Breakout</p>
+                </div>
+                <span class="text-xs text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-lg font-semibold" id="panel-date">
+                    Session Day 1 • 10:45 AM
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest mb-3">Key Structural Deliverables</h4>
+                    <ul id="panel-deliverables" class="space-y-3 text-xs text-slate-400">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></span>
+                            <span>Standardized metrics for estimating quantum-speedup in classical SCADA load monitoring.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></span>
+                            <span>Protocols mapping quantum cryptography deployments across regional power grid boundaries.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></span>
+                            <span>Academic curriculum design framework for new interdisciplinary graduates (Quantum Computing + Civil Systems).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-3">Task-Force Leadership Requirements</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        We actively seek co-conveners from government sectors and industry algorithms developers to manage the peer-review timeline of this chapter.
+                    </p>
+                    <a href="#nominate" class="inline-flex items-center gap-1 text-xs text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+                        Inquire about Chapter Leadership →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request for Invitation Form Module (Since invitation-only) -->
+    <section id="nominate" class="bg-slate-100 py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 sm:p-12">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-1">Invitation Protocol</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Inquire / Request Invitation
+                </h2>
+                <p class="mt-2 text-xs text-slate-500">
+                    This workshop is exclusively curated to maximize strategic research outcomes. Please fill out the form below to register your academic background or request observer access.
+                </p>
+            </div>
+
+            <!-- Interative feedback form -->
+            <form id="invite-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
+                        <input required type="text" id="form-name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all" placeholder="Dr. Sarah Jenkins">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
+                        <input required type="email" id="form-email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all" placeholder="jenkins@gmu.edu">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Institutional Affiliation</label>
+                        <input required type="text" id="form-institution" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all" placeholder="George Mason University">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Primary Domain Segment</label>
+                        <select id="form-domain" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all bg-white">
+                            <option value="academia">Academic Faculty / Researcher</option>
+                            <option value="government">Government Agency (NSF / NIST / DOT)</option>
+                            <option value="industry">Deep-Tech Core Industry Leader</option>
+                            <option value="operator">Infrastructure System Operator</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Proposed Contribution Focus</label>
+                    <textarea required id="form-contribution" rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm transition-all" placeholder="Describe how your work explicitly maps into Pillar 1, 2, or 3..."></textarea>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                    <p class="text-[11px] text-slate-500 leading-normal max-w-sm">
+                        *Note: Selected participants must commit to actively writing and reviewing portions of the published Research Roadmap framework.
+                    </p>
+                    <button type="submit" class="bg-slate-900 hover:bg-slate-950 text-white px-6 py-3 rounded-lg text-xs font-bold transition-all whitespace-nowrap">
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+
+            <!-- Interactive Modal state -->
+            <div id="form-success" class="hidden text-center py-8">
+                <span class="text-4xl">✉</span>
+                <h3 class="text-lg font-bold text-slate-950 mt-4">Inquiry Received Successfully</h3>
+                <p class="text-xs text-slate-500 mt-2 max-w-md mx-auto">
+                    The US-Singapore Research Alliance (R-CPIS) steering committee will verify your application details against target cohort criteria. Expected feedback response: 3-5 business days.
+                </p>
+                <button onclick="resetForm()" class="mt-6 bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg text-xs font-semibold transition-all">
+                    Submit Another Request
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer System -->
+    <footer class="bg-slate-950 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white p-2 rounded font-bold text-sm tracking-tight flex items-center justify-center">
+                    R-CPIS
+                </div>
+                <div>
+                    <p class="text-slate-200 font-bold">US-Singapore R-CPIS Alliance</p>
+                    <p class="text-slate-500 mt-0.5">Part II: Washington D.C. convening September 17-18, 2026</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-6 text-slate-500">
+                <a href="index.html" class="hover:text-slate-300 transition-colors">Part I: Singapore Recap</a>
+                <span class="text-slate-800">|</span>
+                <span>Supported by National Science Foundation (NSF)</span>
+                <span class="text-slate-800">|</span>
+                <span class="text-slate-500">&copy; 2026 R-CPIS Alliance. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Functionality -->
+    <script>
+        // Core Pillars Content Matrix
+        const pillars = {
+            1: {
+                badge: "Pillar 1 Scope",
+                title: "Quantum Engineering for Infrastructure Systems",
+                desc: "Quantum sensing will allow us to measure real-time micro-stresses on bridges, underground water pipelines, and power substations at precision rates previously unimaginable. Concurrently, developing scalable algorithms on upcoming quantum computers prepares our grid operations to dynamic optimization protocols even during total regional signal failures.",
+                questions: [
+                    "How can quantum key distribution (QKD) be scaled cheaply to secure operational technology networks?",
+                    "What are the constraints of current-generation NISQ computers for complex load-balancing simulations?"
+                ]
+            },
+            2: {
+                badge: "Pillar 2 Scope",
+                title: "Resilience Red Teaming",
+                desc: "Instead of classical security modeling, resilience red teaming focuses on adversarial stress testing. By using virtual Digital Twins of complex networks (water, logistics, energy), we deploy automated attack models designed to search for hidden single-points-of-failure and unexpected cascading triggers.",
+                questions: [
+                    "How can AI-driven digital twins model regulatory and logistical cascading failures accurately?",
+                    "What is the liability framework for applying algorithmic stress testing to real-world SCADA systems?"
+                ]
+            },
+            3: {
+                badge: "Pillar 3 Scope",
+                title: "Unconventional & Nature-Based Solutions",
+                desc: "Unconventional adaptations shift from heavy rigid barriers (like concrete dikes) to dynamic natural-artificial hybrid platforms. By tracking nature-based solutions using IoT sensors and automated drones, we combine natural resilience parameters with continuous digital oversight.",
+                questions: [
+                    "How can nature-based barrier structures be telemetry-enabled to report structural stability in real-time?",
+                    "What is the economic evaluation system comparing long-term biological protection with legacy steel/concrete barriers?"
+                ]
+            }
+        };
+
+        // Interactive Theme Pillar Toggle logic
+        function selectPillar(id) {
+            // Highlight Selected button, reset others
+            for (let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`pillar-btn-${i}`);
+                const num = document.getElementById(`pillar-num-${i}`);
+                if (i === id) {
+                    btn.className = "cursor-pointer bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm transition-all duration-200";
+                    if (num) num.className = "bg-blue-100 text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold";
+                } else {
+                    btn.className = "cursor-pointer bg-white/70 hover:bg-white p-6 rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm transition-all duration-200";
+                    if (num) num.className = "bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold";
+                }
+            }
+
+            // Update Right Side Info Card content
+            const data = pillars[id];
+            document.getElementById('display-badge').innerText = data.badge;
+            document.getElementById('display-title').innerText = data.title;
+            document.getElementById('display-desc').innerText = data.desc;
+
+            // Generate questions
+            const qList = document.getElementById('display-questions');
+            qList.innerHTML = '';
+            data.questions.forEach(q => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-2';
+                li.innerHTML = `<span class="text-blue-400 font-bold">•</span><span>${q}</span>`;
+                qList.appendChild(li);
+            });
+        }
+
+        // Tabbed Agenda Toggle
+        function toggleDay(day) {
+            const day1Btn = document.getElementById('day1-btn');
+            const day2Btn = document.getElementById('day2-btn');
+            const day1Content = document.getElementById('day1-content');
+            const day2Content = document.getElementById('day2-content');
+
+            if (day === 1) {
+                day1Btn.className = "px-5 py-2 rounded-lg text-xs font-semibold bg-white text-slate-950 shadow-sm transition-all";
+                day2Btn.className = "px-5 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all";
+                day1Content.classList.remove('hidden');
+                day2Content.classList.add('hidden');
+            } else {
+                day2Btn.className = "px-5 py-2 rounded-lg text-xs font-semibold bg-white text-slate-950 shadow-sm transition-all";
+                day1Btn.className = "px-5 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all";
+                day2Content.classList.remove('hidden');
+                day1Content.classList.add('hidden');
+            }
+        }
+
+        // Active Chapter Roadmap Info panel data
+        const chapters = {
+            1: {
+                title: "Systems Level Diagnostics",
+                date: "Session Day 1 • 10:45 AM",
+                deliverables: [
+                    "Standardized metrics for estimating quantum-speedup in classical SCADA load monitoring.",
+                    "Protocols mapping quantum cryptography deployments across regional power grid boundaries.",
+                    "Academic curriculum design framework for new interdisciplinary graduates (Quantum Computing + Civil Systems)."
+                ]
+            },
+            2: {
+                title: "Adversarial Red Team Protocol",
+                date: "Session Day 1 • 03:45 PM",
+                deliverables: [
+                    "Uniform taxonomy mapping cyber threats specifically targeting municipal sewage and water distribution nodes.",
+                    "Formal requirements for validating digital-twin environments without physical component testing.",
+                    "Coordinated government oversight framework draft for third-party vulnerability red-teaming."
+                ]
+            },
+            3: {
+                title: "Eco-Infrastructure Integration",
+                date: "Session Day 2 • 09:00 AM",
+                deliverables: [
+                    "Physical stability guidelines for deploying sensor-integrated bio-swales in hyper-urban coastal zones.",
+                    "A baseline catalog of sensor metrics tracking biological remediation parameters under severe storm stresses.",
+                    "Policy recommendations advising joint funding (NSF/DOT) on dual nature-artificial utility systems."
+                ]
+            }
+        };
+
+        // Active Roadmap Chapter Tracker UI
+        function setActiveChapter(chId) {
+            // Reset borders
+            for (let i = 1; i <= 3; i++) {
+                const el = document.getElementById(`road-ch${i}`);
+                const bdg = document.getElementById(`road-badge-${i}`);
+                const bar = document.getElementById(`road-bar-${i}`);
+                
+                if (i === chId) {
+                    el.className = "bg-white p-6 rounded-xl border-2 border-blue-500 shadow-sm relative cursor-pointer";
+                    if (bdg) bdg.className = "text-xs font-bold text-blue-600 font-mono uppercase bg-blue-50 px-2 py-0.5 rounded";
+                    if (bar) bar.className = "bg-blue-500 h-full";
+                } else {
+                    el.className = "bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative cursor-pointer hover:border-slate-300";
+                    if (bdg) bdg.className = "text-xs font-bold text-slate-500 font-mono uppercase bg-slate-100 px-2 py-0.5 rounded";
+                    if (bar) bar.className = "bg-slate-400 h-full";
+                }
+            }
+
+            // Update info panel
+            const data = chapters[chId];
+            document.getElementById('panel-title').innerText = `${data.title} Working Session Blueprint`;
+            document.getElementById('panel-date').innerText = data.date;
+
+            const delivList = document.getElementById('panel-deliverables');
+            delivList.innerHTML = '';
+            data.deliverables.forEach(d => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2.5";
+                li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5"></span><span>${d}</span>`;
+                delivList.appendChild(li);
+            });
+        }
+
+        // Registration form submission handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('invite-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        // Reset form UI after successful submission
+        function resetForm() {
+            document.getElementById('invite-form').reset();
+            document.getElementById('invite-form').classList.remove('hidden');
+            document.getElementById('form-success').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
