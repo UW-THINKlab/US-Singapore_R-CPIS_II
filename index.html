@@ -129,6 +129,35 @@
             </div>
         </section>
 
+        <section class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Venue Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4 items-start transition-all hover:shadow-md">
+                    <div class="text-blue-600 mt-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Workshop Venue</h3>
+                        <p class="text-sm font-semibold text-slate-900">Fuse 1311</p>
+                        <p class="text-sm text-slate-600">George Mason University, Mason Square campus</p>
+                        <p class="text-sm text-slate-600">3351 Fairfax Drive, Arlington, VA 22201</p>
+                    </div>
+                </div>
+                <!-- Hotel Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4 items-start transition-all hover:shadow-md">
+                    <div class="text-blue-600 mt-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Recommended Hotel</h3>
+                        <p class="text-sm font-semibold text-slate-900">Hyatt Arlington</p>
+                        <a href="https://www.hyatt.com/hyatt-place/en-US/wasza-hyatt-place-arlington-courthouse-plaza" target="_blank" class="text-sm text-blue-600 hover:underline block mb-2 font-medium">View Hotel Website</a>
+                        <p class="text-xs text-slate-500 italic">Reservation link coming soon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Strategic Driver Segment -->
         <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
@@ -140,14 +169,6 @@
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
                         While the first US-Singapore workshop covers five broad themes related to the resilience of cyber-physical infrastructure systems, the second workshop in D.C. provides a focus inspired by two accelerating trends:
                     </p>
-                    
-                    <div class="mt-6 p-4 rounded-xl border border-amber-200 bg-amber-50/50 flex gap-3 text-xs text-amber-800 leading-relaxed">
-                        <span class="text-lg">💡</span>
-                        <div>
-                            <strong class="font-semibold block mb-0.5">Roadmap Objective:</strong>
-                            The deliverable of this session is the compilation of a high-impact research prospectus directing collaborative cross-border research funding on infrastructure survivability.
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Visual comparison of the two intersecting drivers -->
@@ -404,7 +425,7 @@
                 institution: "University of Washington",
                 desc: "sensing, monitoring, analysis and incentive designs of urban transportation systems with human in the loop, particularly focusing on human mobility modeling and peer-to-peer resource sharing.",
                 link: "https://www.ce.washington.edu/facultyfinder/cynthia-chen",
-                role: "Professor, Lead Organizer"
+                role: "Professor"
             },
             {
                 initials: "EMH",
@@ -420,7 +441,7 @@
                 institution: "University of California, Davis",
                 desc: "Modeling, optimization, and computation for transportation and renewable energy infrastructure systems, with a focus on integrating applied mathematics and engineering domain knowledge to address challenges related to system uncertainty, dynamics, and data issues to improve the resilience and sustainability of civil infrastructure.",
                 link: "https://faculty.engineering.ucdavis.edu/fan/",
-                role: "Professor, Co-Organizer"
+                role: "Professor"
             },
             {
                 initials: "TK",
@@ -428,7 +449,7 @@
                 institution: "Universityof Hawaii",
                 desc: "Signal processing, neural networks, and research administration.",
                 link: "http://www.ee.hawaii.edu/~kuh/info.html",
-                role: "Professor, Co-Organizer"
+                role: "Professor"
             },
             {
                 initials: "DL",
@@ -436,7 +457,7 @@
                 institution: "University of Alabama",
                 desc: "Hazard risk modeling and reduction for critical infrastructure, structural engineering, and earthquake and wind engineering.",
                 link: "https://eng.ua.edu/eng-directory/dr-daan-liang/",
-                role: "Professor, Co-Organizer"
+                role: "Professor"
             },
             {
                 initials: "DC",
@@ -444,7 +465,7 @@
                 institution: "Former NSF Program Director",
                 desc: "Cyber-physical systems (CPS), sensing and control, and large-scale federal research program development and management.",
                 link: null,
-                role: "Co-Organizer"
+                role: " "
             },
             {
                 initials: "AD",
@@ -452,7 +473,7 @@
                 institution: "Vanderbilt University",
                 desc: "Artificial intelligence and distributed computing for cyber-physical systems, and smart and connected communities; resilient computational abstractions and the online learning algorithms and decision procedures for cyber-physical systems; design of hierarchical decision procedures for responding to motor vehicle crashes, energy-efficient transit operation procedures, and transactive energy systems.",
                 link: "https://my.vanderbilt.edu/dabhishe/",
-                role: "Professor, Co-Organizer"
+                role: "Professor"
             }
         ];
 
@@ -601,7 +622,7 @@
                 institution: "Iowa State University",
                 desc: " ",
                 link: "https://faculty.sites.iastate.edu/nok/",
-                role: "Assistant Professor"
+                role: "Associate Professor"
             },
             {
                 category: "us",
@@ -625,10 +646,10 @@
                 category: "us",
                 initials: "OS",
                 name: "Oleg Sokolsky",
-                institution: "University of Pennsylvania",
+                institution: "National Science Foundation (NSF)",
                 desc: " ",
                 link: "https://www.cis.upenn.edu/~sokolsky/",
-                role: "Research Professor"
+                role: "Program Director"
             },
             {
                 category: "us",
