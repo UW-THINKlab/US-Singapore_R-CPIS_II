@@ -477,34 +477,26 @@
             <div class="relative max-w-5xl mx-auto text-center">
                 <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">The Workshop Agenda</h2>
                 <p class="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
-                    A highly structured, outcome-driven agenda focused on active discussion, peer evaluation, and multidisciplinary blocks.
-                </p>
+                    <strong>Program design:</strong> Three thematic blocks—quantum applications, resilience red-teaming, and unconventional solutions—each combine a keynote or framing session, technical presentations, a panel discussion, and a Day 2 roadmap working session. </p>
             </div>
         </section>
 
-        <!-- Dynamic Agenda Filters Panel -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex justify-center">
-                <!-- Day Selectors -->
-                <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200 w-full md:w-auto">
-                    <button onclick="filterAgendaDay(1)" id="agenda-day1-btn" class="flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all">
-                        Day 1: Sept 17
+        <!-- Sticky Day Selectors Panel -->
+        <div class="sticky top-20 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+                <div class="flex bg-slate-200 p-1.5 rounded-xl border border-slate-300 w-full sm:w-auto">
+                    <button onclick="filterAgendaDay(1)" id="agenda-day1-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all">
+                        Day 1: Sept 17 (Quantum Applications & Red-Teaming)
                     </button>
-                    <button onclick="filterAgendaDay(2)" id="agenda-day2-btn" class="flex-1 md:flex-none px-6 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all">
-                        Day 2: Sept 18
+                    <button onclick="filterAgendaDay(2)" id="agenda-day2-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all">
+                        Day 2: Sept 18 (Unconventional Solutions & Roadmap Sessions)
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Timeline Flow / Details -->
         <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-            <!-- Toast notification container for interactive planner bookmark actions -->
-            <div id="planner-toast" class="hidden fixed bottom-6 right-6 bg-slate-900 text-white px-4 py-3 rounded-lg text-xs font-medium shadow-xl border border-slate-800 flex items-center gap-2 transition-all duration-300 z-50">
-                <span class="text-green-400">✔</span>
-                <span id="toast-message">Session bookmarked.</span>
-            </div>
-
             <!-- Schedule Card Stack -->
             <div id="timeline-container" class="space-y-4">
                 <!-- Timeline cards dynamically injected or toggled via script -->
@@ -902,7 +894,7 @@
         };
 
         // Complete Structured Day 1 & Day 2 Schedule Database
-        const scheduleDb = [
+        const scheduleDb_v0 = [
             {
                 id: "s1",
                 day: 1,
@@ -923,6 +915,275 @@
                 location: "",
                 category: "",
                 details: ""
+            }
+        ];
+
+        // Complete Structured Day 1 & Day 2 Schedule Database (Small-scale single room setup, category-driven)
+        const scheduleDb = [
+            // Day 1 Schedule
+            {
+                id: "d1-1",
+                day: 1,
+                time: "8:00-8:30 AM",
+                title: "Day 1 - Registration, Continental Breakfast, and Networking",
+                speaker: "",
+                desc: "Check-in, welcome refreshments, and morning networking for attendees.",
+                category: "registration"
+            },
+            {
+                id: "d1-2",
+                day: 1,
+                time: "8:30-8:55 AM",
+                title: "Welcome and Opening Remarks",
+                desc: "Welcome from the workshop organizers, host institution, National Science Foundation representatives, and participating U.S. institutions.",
+                speaker: "",
+                category: "welcome"
+            },
+            {
+                id: "d1-3",
+                day: 1,
+                time: "8:55-9:25 AM",
+                title: "From Singapore to Washington: Recap of the First R-CPIS Workshop",
+                speaker: "",
+                desc: "A synthesis of the major findings, collaborations, unresolved questions, and research opportunities identified during the first workshop in Singapore. This naturally introduces the expected outputs of the three technical areas.",
+                category: "recap"
+            },
+            {
+                id: "d1-4",
+                day: 1,
+                time: "9:25-10:10 AM",
+                title: "Keynote Address 1: Quantum Technologies for Civil Infrastructure Systems",
+                speaker: "Speaker: Vishal Sharma, Phasecraft",
+                desc: "",
+                category: "keynote"
+            },
+            {
+                id: "d1-5",
+                day: 1,
+                time: "10:10-10:25 AM",
+                title: "Morning Coffee Break",
+                speaker: "",
+                desc: "Refreshments and informal discussion and networking.",
+                category: "break"
+            },
+            {
+                id: "d1-6",
+                day: 1,
+                time: "10:25-11:35 AM",
+                title: "Tutorial: Quantum Applications for Civil Engineering and Infrastructure Systems",
+                speaker: "Lead: Vishal Sharma and Abhishek Dubey",
+                desc: "An accessible introduction for civil engineering and infrastructure researchers without a quantum-computing background. Possible topics include quantum computing, quantum optimization, quantum sensing, quantum communication and security, potential infrastructure applications, technology-readiness levels, and realistic near- and longer-term opportunities.",
+                category: "tutorial"
+            },
+            {
+                id: "d1-7",
+                day: 1,
+                time: "11:35 AM - 12:35 PM",
+                title: "Technical Session 1: Quantum Applications for Civil Infrastructure Systems",
+                speaker: "Lead: Abhishek Dubey",
+                desc: "Focused presentations addressing quantum applications in infrastructure planning, monitoring, control, optimization, sensing, communications, cybersecurity, materials, and decision-making. Presenters should identify promising use cases, technological readiness, and technical or institutional barriers.",
+                category: "technical"
+            },
+            {
+                id: "d1-8",
+                day: 1,
+                time: "12:35-1:15 PM",
+                title: "Panel Discussion 1: Where Can Quantum Technologies Make a Meaningful Difference?",
+                speaker: "Lead: Abhishek Dubey",
+                desc: "Discussion of high-value applications, technology readiness, workforce needs, testbeds, data requirements, implementation risks, and priority opportunities for U.S.-Singapore collaboration.",
+                category: "panel"
+            },
+            {
+                id: "d1-9",
+                day: 1,
+                time: "1:15-2:15 PM",
+                title: "Networking Lunch",
+                speaker: "",
+                desc: "Lunch and networking.",
+                category: "break"
+            },
+            {
+                id: "d1-10",
+                day: 1,
+                time: "2:15-3:00 PM",
+                title: "Keynote Address 2: Resilience Red-Teaming for Cyber-Physical Infrastructure Systems",
+                speaker: "Keynote Speaker: Henry Liu, University of Michigan, Ann Arbor",
+                desc: "",
+                category: "keynote"
+            },
+            {
+                id: "d1-13",
+                day: 1,
+                time: "3:00-4:00 PM",
+                title: "Technical Session 2: Resilience Red-Teaming for Cyber-Physical Infrastructure Systems",
+                speaker: "Lead: Yueyue Fan",
+                desc: "Presentations on adversarial testing, stress testing, cascading failures, compound hazards, cyber-physical attacks, AI vulnerabilities, digital twins, benchmark scenarios, and systematic methods for revealing weaknesses in interconnected infrastructure systems.",
+                category: "technical"
+            },
+            {
+                id: "d1-14",
+                day: 1,
+                time: "4:00-4:40 PM",
+                title: "Panel Discussion 2: Developing a Red-Teaming Science for Infrastructure Resilience",
+                speaker: "Lead: Yueyue Fang",
+                desc: "Discussion of threat models, benchmark systems, failure scenarios, evaluation metrics, datasets, simulation environments, responsible disclosure, and the balance between research transparency and infrastructure security.",
+                category: "panel"
+            },
+            {   id: "d1-15",
+                day: 1,
+                time: "4:40-4:55 PM",
+                title: "Afternoon Coffee Break",
+                speaker: "",
+                desc: "Refreshments and informal discussion and networking.",
+                category: "break"
+            },
+            {
+                id: "d1-16",
+                day: 1,
+                time: "4:55-5:25 PM",
+                title: "Day 1 Synthesis and Roadmap Working-Session Charge",
+                speaker: "Lead: David Corman and Tony Kuh",
+                desc: "Technical-session leads identify emerging priorities, research gaps, and cross-cutting issues. Organizers introduce the roadmap template, expected outputs, breakout assignments, and responsibilities for the Day 2 working sessions.",
+                category: "roadmap"
+            },
+            {
+                id: "d1-17",
+                day: 1,
+                time: "5:25 PM",
+                title: "Day 1 Adjournment",
+                speaker: "",
+                desc: "",
+                category: "adjournment"
+            },
+            // Day 2 Schedule
+            {
+                id: "d2-1",
+                day: 2,
+                time: "8:00-8:30 AM",
+                title: "Day 2 - Continental Breakfast and Networking",
+                speaker: "",
+                desc: "Check-in, welcome refreshments, and morning networking for attendees.",
+                category: "registration"
+            },
+            {
+                id: "d2-2",
+                day: 2,
+                time: "8:30-8:45 AM",
+                title: "Welcome and Reflections from Day 1",
+                desc: "",
+                speaker: "",
+                category: "welcome"
+            },
+            {
+                id: "d2-3",
+                day: 2,
+                time: "8:45-9:30 AM",
+                title: "Keynote Address 3: Unconventional and Transformative Approaches to Infrastructure Resilience (TBD)",
+                speaker: "Speaker: TBD",
+                desc: "",
+                category: "keynote"
+            },
+            {
+                id: "d2-4",
+                day: 2,
+                time: "9:30-10:30 AM",
+                title: "Technical Session 3: Unconventional Solutions for Infrastructure Resilience",
+                speaker: "Lead: Daan Liang and Cynthia Chen",
+                desc: "Presentations exploring nature-based solutions, hidden and underutilized system capacities, decentralized and autonomous systems, community and social resources, adaptive reuse, cross-infrastructure redundancy, and other transformative technologies or institutional arrangements.",
+                category: "technical"
+            },
+            {
+                id: "d2-5",
+                day: 2,
+                time: "10:30-11:10 AM",
+                title: "Panel Discussion 3: Moving Unconventional Solutions from Ideas to Practice",
+                speaker: "Lead: Daan Liang and Cynthia Chen",
+                desc: "Discussion of scientific foundations, implementation barriers, governance, scalability, equity, performance evaluation, public acceptance, and opportunities for real-world demonstrations.",
+                category: "panel"
+            },
+            {
+                id: "d2-6",
+                day: 2,
+                time: "11:10-11:25 AM",
+                title: "Morning Coffee Break",
+                speaker: "",
+                desc: "Refreshments and informal discussion and networking.",
+                category: "break"
+            },
+            {
+                id: "d2-7",
+                day: 2,
+                time: "11:25 AM - 12:10 PM",
+                title: "Cross-Cutting Plenary: Shared Testbeds, Data, Benchmarks, and Demonstration Opportunities",
+                speaker: "Lead: Elise Miller-Hooks and Yueyue Fan",
+                desc: "Participants identify resources that could support multiple technical areas, including physical and digital testbeds, benchmark infrastructure networks, digital twins, hazard scenarios, datasets, modeling platforms, and U.S.-Singapore demonstration sites.",
+                category: "plenary"
+            },
+            {   id: "d2-8",
+                day: 2,
+                time: "12:10-12:30 PM",
+                title: "Roadmap Framework and Working-Group Preparation",
+                speaker: "Lead: Cynthia Chen",
+                desc: "Technical-session leads summarize the central questions their groups will address. Participants confirm their roadmap groups and review the expected deliverables.",
+                category: "roadmap"
+            },
+            {
+                id: "d2-9",
+                day: 2,
+                time: "12:30-1:30 PM",
+                title: "Networking Lunch",
+                speaker: "",
+                desc: "Lunch and networking.",
+                category: "break"
+            },
+            {
+                id: "d2-10",
+                day: 2,
+                time: "1:30-3:30 PM",
+                title: "Parallel Roadmap Working Sessions",
+                speaker: "",
+                desc: `Each technical-session lead convenes a working group to produce a preliminary roadmap for the corresponding area. <br>
+                * <strong>Working group A</strong>: Quantum Applications for Civil Infrastructure Systems<br>
+                * <strong>Working group B</strong>: Resilience Red-Teaming and Benchmarking<br>
+                * <strong>Working group C</strong>: Unconventional Solutions for Infrastructure Resilience<br>
+                <strong>Expected roadmap elements:</strong> priority research questions; near-, medium-, and long-term objectives; required data, models, testbeds, and benchmarks; pilot and demonstration opportunities; complementary U.S. and Singapore capabilities; workforce, governance, and stakeholder needs; measures of impact; and specific follow-up actions.`,
+                category: "roadmap"
+            },
+
+            {   id: "d2-11",
+                day: 2,
+                time: "3:30-3:45 PM",
+                title: "Afternoon Coffee Break",
+                speaker: "",
+                desc: "Refreshments and informal discussion and networking.",
+                category: "break"
+            },
+            {
+                id: "d2-12",
+                day: 2,
+                time: "3:45-4:30 PM",
+                title: "Roadmap Report-Outs",
+                speaker: "",
+                desc: "Approximately 15 minutes for each working group to present its priority questions, proposed activities, milestones, collaborative opportunities, and immediate next steps.",
+                category: "roadmap"
+            },
+            {
+                id: "d2-13",
+                day: 2,
+                time: "4:30-5:00 PM",
+                title: "Integrated R-CPIS Research Roadmap, Cross-Theme Priorities, and Closing Remarks",
+                speaker: "Lead: Daan Liang and Cynthia Chen",
+                desc: "A plenary discussion to identify connections among the three roadmaps, shared enabling capabilities, near-term collaborative projects, prospective funding opportunities, and responsibilities for completing the written workshop report. The session concludes with brief closing remarks and acknowledgment of participants.",
+                category: "plenary"
+            },
+            {
+                id: "d2-14",
+                day: 2,
+                time: "5:00 PM",
+                title: "Workshop Adjournment",
+                speaker: "",
+                desc: "",
+                category: "adjournment"
             }
         ];
 
@@ -1149,6 +1410,9 @@
                 }
             });
 
+            if (viewId === 'agenda') {
+                renderAgendaTimeline();
+            }
             // Scroll to top when switching views
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }        
@@ -1223,7 +1487,8 @@
         }
 
         // Dynamic schedule timeline renderer
-        function renderAgendaTimeline() {
+        // Old version (v0) for reference, replaced by renderAgendaTimeline() below
+        function renderAgendaTimeline_v0() {
             const container = document.getElementById('timeline-container');
             container.innerHTML = '';
 
@@ -1249,7 +1514,7 @@
             // Generate timeline elements
             filtered.forEach(item => {
                 const categoryLabels = {
-                    writing: { text: "Breakout Writing", bg: "bg-amber-50 text-amber-700 border-amber-200" },
+                    presentation: { text: "Technical Presentations", bg: "bg-amber-50 text-amber-700 border-amber-200" },
                     panel: { text: "Panel Discussion", bg: "bg-purple-50 text-purple-700 border-purple-200" },
                     plenary: { text: "Plenary Session", bg: "bg-blue-50 text-blue-700 border-blue-200" }
                 };
@@ -1301,6 +1566,66 @@
                         <div id="details-${item.id}" class="hidden bg-slate-50 border-t border-slate-100 px-5 py-4 text-xs text-slate-600 leading-relaxed">
                             <strong class="font-bold text-slate-800 block mb-1">Session Target Deliverables:</strong>
                             <p>${item.details}</p>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHtml;
+            });
+        }
+
+        // Render agenda items with full details visible, no locations, no search/bookmark
+        function renderAgendaTimeline() {
+            const container = document.getElementById('timeline-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const filtered = scheduleDb.filter(item => item.day === agendaActiveDay);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-500 text-xs">
+                        Agenda sessions for this day are currently being finalized.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const categoryLabels = {
+                    registration: { text: "Registration / Breakfast", bg: "bg-slate-100 text-slate-700 border-slate-200" },
+                    breakfast: { text: "Breakfast / Networking", bg: "bg-slate-100 text-slate-700 border-slate-200" },
+                    welcome: { text: "Welcome Remarks", bg: "bg-blue-50 text-blue-700 border-blue-200" },
+                    recap: { text: "Workshop I Recap", bg: "bg-teal-50 text-teal-700 border-teal-200" },
+                    keynote: { text: "Keynote Address", bg: "bg-purple-50 text-purple-700 border-purple-200" },
+                    break: { text: "Break / Networking", bg: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+                    tutorial: { text: "Tutorial", bg: "bg-amber-50 text-amber-700 border-amber-200" },
+                    technical: { text: "Technical Presentations", bg: "bg-indigo-50 text-indigo-700 border-indigo-200" },
+                    panel: { text: "Panel Discussion", bg: "bg-rose-50 text-rose-700 border-rose-200" },
+                    roadmap: { text: "Roadmap Session", bg: "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200" },
+                    plenary: { text: "Plenary Session", bg: "bg-blue-50 text-blue-700 border-blue-200" },
+                    adjournment: { text: "Adjournment", bg: "bg-slate-100 text-slate-700 border-slate-200" }
+                };
+
+                const label = categoryLabels[item.category] || { text: "Session", bg: "bg-slate-50 text-slate-700 border-slate-200" };
+
+                const cardHtml = `
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden p-6">
+                        <div class="flex flex-col sm:flex-row items-start gap-4">
+                            <div class="w-32 flex-shrink-0">
+                                <span class="mono text-xs font-bold bg-slate-100 text-slate-700 px-2.5 py-1 rounded inline-block">
+                                    ${item.time}
+                                </span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 flex-wrap mb-2">
+                                    <span class="text-[10px] font-bold border px-2 py-0.5 rounded-full ${label.bg}">
+                                        ${label.text}
+                                    </span>
+                                </div>
+                                <h4 class="text-base font-bold text-slate-950">${item.title}</h4>
+                                <p class="text-md font-bold text-slate-600 mt-1">${item.speaker}</p>
+                                <p class="text-xs text-slate-600 mt-2 leading-relaxed">${item.desc}</p>
+                            </div>
                         </div>
                     </div>
                 `;
