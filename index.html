@@ -484,12 +484,13 @@
         <!-- Sticky Day Selectors Panel -->
         <div class="sticky top-20 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-                <div class="flex bg-slate-200 p-1.5 rounded-xl border border-slate-300 w-full sm:w-auto">
-                    <button onclick="filterAgendaDay(1)" id="agenda-day1-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all">
-                        Day 1: Sept 17 (Quantum Applications & Red-Teaming)
+                <!-- Changed wrapper to flex-col on mobile / sm, and allowed button text to wrap naturally using whitespace-normal and text-center -->
+                <div class="flex flex-col sm:flex-row bg-slate-200 p-1.5 rounded-xl border border-slate-300 w-full sm:w-auto gap-2">
+                    <button onclick="filterAgendaDay(1)" id="agenda-day1-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold bg-white text-slate-950 shadow-sm transition-all whitespace-normal text-center">
+                        Day 1: Thursday, Sept 17<span class="block font-normal text-[11px] opacity-90 mt-0.5">Quantum Applications and Resilience Research Frontiers</span>
                     </button>
-                    <button onclick="filterAgendaDay(2)" id="agenda-day2-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all">
-                        Day 2: Sept 18 (Unconventional Solutions & Roadmap Session)
+                    <button onclick="filterAgendaDay(2)" id="agenda-day2-btn" class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-950 transition-all whitespace-normal text-center">
+                        Day 2: Friday, Sept 18<span class="block font-normal text-[11px] opacity-90 mt-0.5">Resilience Red-Teaming and Collaborative Research Roadmapping</span>
                     </button>
                 </div>
             </div>
@@ -510,7 +511,7 @@
                     </div>
                     <h3 class="text-lg font-bold text-slate-900">Anticipated Workshop Outputs</h3>
                 </div>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
+                <ul class="grid grid-cols-1 md:grid-cols-1 gap-3 text-xs text-slate-700">
                     <li class="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-start gap-1.5">
                         <span class="text-blue-600 font-bold mt-0.5">•</span>
                         <span>A preliminary roadmap for each of the three technical areas.</span>
@@ -518,10 +519,6 @@
                     <li class="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-start gap-1.5">
                         <span class="text-blue-600 font-bold mt-0.5">•</span>
                         <span>A cross-cutting inventory of shared research infrastructure, testbeds, datasets, and benchmarks.</span>
-                    </li>
-                    <li class="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-start gap-1.5">
-                        <span class="text-blue-600 font-bold mt-0.5">•</span>
-                        <span>A portfolio of potential U.S.-Singapore pilot projects and demonstration activities.</span>
                     </li>
                     <li class="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-start gap-1.5">
                         <span class="text-blue-600 font-bold mt-0.5">•</span>
@@ -922,6 +919,15 @@
                 desc: " ",
                 link: "https://www.linkedin.com/in/alimurtazakothawala/",
                 role: "Doctoral Researcher"
+            },
+            {
+                category: "us",
+                initials: "YH",
+                name: "Yih-Fang Huang",
+                institution: "National Science Foundation (NSF)",
+                desc: " ",
+                link: "https://engineering.nd.edu/faculty/yih-fang-huang/",
+                role: "Program Director"
             }
         ];
 
@@ -968,7 +974,6 @@
                 category: "",
                 details: ""
             },
-
             {
                 id: "s6",
                 day: 2,
@@ -987,7 +992,7 @@
             {
                 id: "d1-1",
                 day: 1,
-                time: "8:00-8:30 AM",
+                time: "7:30-8:30 AM",
                 title: "Day 1 - Registration, Continental Breakfast, and Networking",
                 speaker: "",
                 desc: "Check-in, welcome refreshments, and morning networking for attendees.",
@@ -996,7 +1001,7 @@
             {
                 id: "d1-2",
                 day: 1,
-                time: "8:30-8:55 AM",
+                time: "8:30-9:00 AM",
                 title: "Welcome and Opening Remarks",
                 desc: "Welcome from the workshop organizers, host institution, National Science Foundation representatives, and participating U.S. institutions.",
                 speaker: "",
@@ -1005,114 +1010,87 @@
             {
                 id: "d1-3",
                 day: 1,
-                time: "8:55-9:25 AM",
-                title: "From Singapore to Washington: Recap of the First R-CPIS Workshop",
-                speaker: "",
-                desc: "A synthesis of the major findings, collaborations, unresolved questions, and research opportunities identified during the first workshop in Singapore. This naturally introduces the expected outputs of the three technical areas.",
-                category: "recap"
-            },
-            {
-                id: "d1-4",
-                day: 1,
-                time: "9:25-10:10 AM",
+                time: "9:00-9:45 AM",
                 title: "Keynote Address 1: Quantum Technologies for Civil Infrastructure Systems",
                 speaker: "Speaker: Vishal Sharma, Phasecraft",
                 desc: "",
                 category: "keynote"
             },
             {
-                id: "d1-5",
+                id: "d1-4",
                 day: 1,
-                time: "10:10-10:25 AM",
+                time: "9:45-10:00 AM",
                 title: "Morning Coffee Break",
                 speaker: "",
                 desc: "Refreshments and informal discussion and networking.",
                 category: "break"
             },
             {
-                id: "d1-6",
+                id: "d1-5",
                 day: 1,
-                time: "10:25-11:35 AM",
+                time: "10:00-11:00 AM",
                 title: "Tutorial: Quantum Applications for Civil Engineering and Infrastructure Systems",
-                speaker: "Lead: Vishal Sharma and Abhishek Dubey",
+                speaker: "Lead: Vishal Sharma",
                 desc: "An accessible introduction for civil engineering and infrastructure researchers without a quantum-computing background. Possible topics include quantum computing, quantum optimization, quantum sensing, quantum communication and security, potential infrastructure applications, technology-readiness levels, and realistic near- and longer-term opportunities.",
                 category: "tutorial"
             },
             {
-                id: "d1-7",
+                id: "d1-6",
                 day: 1,
-                time: "11:35 AM - 12:35 PM",
-                title: "Technical Session 1: Quantum Applications for Civil Infrastructure Systems",
+                time: "11:00-12:30 PM",
+                title: "Technical and Brainstorming Session 1: Where Can Quantum Make a Meaningful Difference?",
                 speaker: "Lead: Abhishek Dubey",
-                desc: "Focused presentations addressing quantum applications in infrastructure planning, monitoring, control, optimization, sensing, communications, cybersecurity, materials, and decision-making. Presenters should identify promising use cases, technological readiness, and technical or institutional barriers.",
+                desc: "Discussion of high-value applications, technology readiness, workforce needs, testbeds, data requirements, implementation risks, and priority opportunities. Presenters and panelists should identify promising use cases (or uses that are not suitable for quantum computing), technological readiness, and technical or institutional barriers.",
                 category: "technical"
             },
             {
-                id: "d1-8",
+                id: "d1-7",
                 day: 1,
-                time: "12:35-1:15 PM",
-                title: "Panel Discussion 1: Where Can Quantum Technologies Make a Meaningful Difference?",
-                speaker: "Lead: Abhishek Dubey",
-                desc: "Discussion of high-value applications, technology readiness, workforce needs, testbeds, data requirements, implementation risks, and priority opportunities for U.S.-Singapore collaboration.",
-                category: "panel"
-            },
-            {
-                id: "d1-9",
-                day: 1,
-                time: "1:15-2:15 PM",
+                time: "12:30-1:30 PM",
                 title: "Networking Lunch",
                 speaker: "",
                 desc: "Lunch and networking.",
                 category: "break"
             },
             {
-                id: "d1-10",
+                id: "d1-8",
                 day: 1,
-                time: "2:15-3:00 PM",
+                time: "1:30-2:15 PM",
                 title: "Keynote Address 2: Stress-Testing Autonomous Vehicles and Beyond: Mcity and Infrastructure Resilience",
-                speaker: "Speaker: Henry Liu, University of Michigan, Ann Arbor",
+                speaker: "Speaker: Henry Liu, University of Michigan",
                 desc: "",
                 category: "keynote"
             },
             {
-                id: "d1-13",
+                id: "d1-9",
                 day: 1,
-                time: "3:00-4:00 PM",
-                title: "Technical Session 2: Resilience Red-Teaming for Cyber-Physical Infrastructure Systems",
-                speaker: "Lead: Yueyue Fan",
-                desc: "Presentations on adversarial testing, stress testing, cascading failures, compound hazards, cyber-physical attacks, AI vulnerabilities, digital twins, benchmark scenarios, and systematic methods for revealing weaknesses in interconnected infrastructure systems.",
+                time: "2:15-3:45 PM",
+                title: "Technical and Brainstorming Session 2: Looking Back, Looking Forward: From CRISP, SCC, and CPS to CIVIC and Beyond",
+                speaker: "Lead: David Corman and Elise Miller-Hooks",
+                desc: "Lightening talks by past and current performers of those programs, followed by a discussion on what has been learned and what are our future research needs? Discussion of scientific foundations, implementation barriers, governance, scalability, performance evaluation, public acceptance, and opportunities for real-world demonstrations.",
                 category: "technical"
             },
-            {
-                id: "d1-14",
+            {   id: "d1-10",
                 day: 1,
-                time: "4:00-4:40 PM",
-                title: "Panel Discussion 2: Developing a Red-Teaming Science for Infrastructure Resilience",
-                speaker: "Lead: Yueyue Fang",
-                desc: "Discussion of threat models, benchmark systems, failure scenarios, evaluation metrics, datasets, simulation environments, responsible disclosure, and the balance between research transparency and infrastructure security.",
-                category: "panel"
-            },
-            {   id: "d1-15",
-                day: 1,
-                time: "4:40-4:55 PM",
+                time: "3:45-4:00 PM",
                 title: "Afternoon Coffee Break",
                 speaker: "",
                 desc: "Refreshments and informal discussion and networking.",
                 category: "break"
             },
             {
-                id: "d1-16",
+                id: "d1-11",
                 day: 1,
-                time: "4:55-5:25 PM",
+                time: "4:00-4:30 PM",
                 title: "Day 1 Synthesis and Roadmap Working-Session Charge",
-                speaker: "Lead: David Corman and Tony Kuh",
-                desc: "Technical-session leads identify emerging priorities, research gaps, and cross-cutting issues. Organizers introduce the roadmap template, expected outputs, breakout assignments, and responsibilities for the Day 2 working sessions.",
+                speaker: "Lead: Tony Kuh",
+                desc: "Summary of key insights from day 1. Organizers introduce the roadmap template, expected outputs, breakout assignments, and responsibilities for the Day 2 working sessions.",
                 category: "roadmap"
             },
             {
-                id: "d1-17",
+                id: "d1-12",
                 day: 1,
-                time: "5:25 PM",
+                time: "4:30 PM",
                 title: "Day 1 Adjournment",
                 speaker: "",
                 desc: "",
@@ -1123,7 +1101,7 @@
                 id: "d2-1",
                 day: 2,
                 time: "8:00-8:30 AM",
-                title: "Day 2 - Continental Breakfast and Networking",
+                title: "Continental Breakfast and Networking",
                 speaker: "",
                 desc: "Check-in, welcome refreshments, and morning networking for attendees.",
                 category: "registration"
@@ -1131,8 +1109,8 @@
             {
                 id: "d2-2",
                 day: 2,
-                time: "8:30-8:45 AM",
-                title: "Welcome and Reflections from Day 1",
+                time: "8:30-9:00 AM",
+                title: "Day 2 Welcome and Opening Remarks",
                 desc: "",
                 speaker: "",
                 category: "welcome"
@@ -1140,7 +1118,7 @@
             {
                 id: "d2-3",
                 day: 2,
-                time: "8:45-9:30 AM",
+                time: "9:00-9:45 AM",
                 title: "Keynote Address 3: Unconventional and Transformative Approaches to Infrastructure Resilience (TBD)",
                 speaker: "Speaker: TBD",
                 desc: "",
@@ -1149,58 +1127,50 @@
             {
                 id: "d2-4",
                 day: 2,
-                time: "9:30-10:30 AM",
-                title: "Technical Session 3: Unconventional Solutions for Infrastructure Resilience",
-                speaker: "Lead: Daan Liang and Cynthia Chen",
-                desc: "Presentations exploring nature-based solutions, hidden and underutilized system capacities, decentralized and autonomous systems, community and social resources, adaptive reuse, cross-infrastructure redundancy, and other transformative technologies or institutional arrangements.",
-                category: "technical"
-            },
-            {
-                id: "d2-5",
-                day: 2,
-                time: "10:30-11:10 AM",
-                title: "Panel Discussion 3: Moving Unconventional Solutions from Ideas to Practice",
-                speaker: "Lead: Daan Liang and Cynthia Chen",
-                desc: "Discussion of scientific foundations, implementation barriers, governance, scalability, equity, performance evaluation, public acceptance, and opportunities for real-world demonstrations.",
-                category: "panel"
-            },
-            {
-                id: "d2-6",
-                day: 2,
-                time: "11:10-11:25 AM",
+                time: "9:45-10:00 AM",
                 title: "Morning Coffee Break",
                 speaker: "",
                 desc: "Refreshments and informal discussion and networking.",
                 category: "break"
             },
             {
-                id: "d2-7",
+                id: "d2-5",
                 day: 2,
-                time: "11:25 AM - 12:10 PM",
-                title: "Cross-Cutting Plenary: Shared Testbeds, Data, Benchmarks, and Demonstration Opportunities",
-                speaker: "Lead: Elise Miller-Hooks and Yueyue Fan",
-                desc: "Participants identify resources that could support multiple technical areas, including physical and digital testbeds, benchmark infrastructure networks, digital twins, hazard scenarios, datasets, modeling platforms, and U.S.-Singapore demonstration sites.",
-                category: "plenary"
-            },
-            {   id: "d2-8",
-                day: 2,
-                time: "12:10-12:30 PM",
-                title: "Roadmap Framework and Working-Group Preparation",
-                speaker: "Lead: Cynthia Chen",
-                desc: "Technical-session leads summarize the central questions their groups will address. Participants confirm their roadmap groups and review the expected deliverables.",
-                category: "roadmap"
+                time: "10:00-11:00 AM",
+                title: "Technical Session 3: Resilience Red-Teaming for Cyber-Physical Infrastructure Systems",
+                speaker: "Lead: Yueyue Fan",
+                desc: "Presentations on adversarial testing, stress testing, cascading failures, compound hazards, cyber-physical attacks, AI vulnerabilities, digital twins, benchmark scenarios, and systematic methods for revealing weaknesses in interconnected infrastructure systems.",
+                category: "technical"
             },
             {
-                id: "d2-9",
+                id: "d2-6",
                 day: 2,
-                time: "12:30-1:30 PM",
+                time: "11:00-11:30 AM",
+                title: "Panel Discussion 3: Developing a Red-Teaming Science for Infrastructure Resilience",
+                speaker: "Lead: Yueyue Fan",
+                desc: "Discussion of threat models, benchmark systems, failure scenarios, evaluation metrics, datasets, simulation environments, responsible disclosure, and the balance between research transparency and infrastructure security.",
+                category: "panel"
+            },
+            {
+                id: "d2-7",
+                day: 2,
+                time: "11:30-12:30 PM",
                 title: "Networking Lunch",
                 speaker: "",
                 desc: "Lunch and networking.",
                 category: "break"
             },
             {
-                id: "d2-10",
+                id: "d2-8",
+                day: 2,
+                time: "12:30-1:30 PM",
+                title: "NSF PD presentations and Q&A",
+                speaker: "",
+                desc: "",
+                category: "plenary"
+            },
+            {
+                id: "d2-9",
                 day: 2,
                 time: "1:30-3:30 PM",
                 title: "Parallel Roadmap Working Sessions",
@@ -1209,40 +1179,31 @@
                 * <strong>Working group A</strong>: Quantum Applications for Civil Infrastructure Systems<br>
                 * <strong>Working group B</strong>: Resilience Red-Teaming and Benchmarking<br>
                 * <strong>Working group C</strong>: Unconventional Solutions for Infrastructure Resilience<br>
-                <strong>Expected roadmap elements:</strong> priority research questions; near-, medium-, and long-term objectives; required data, models, testbeds, and benchmarks; pilot and demonstration opportunities; complementary U.S. and Singapore capabilities; workforce, governance, and stakeholder needs; measures of impact; and specific follow-up actions.`,
+                <strong>Expected roadmap elements:</strong> priority research questions; near-, medium-, and long-term objectives; required data, models, testbeds, and benchmarks; pilot and demonstration opportunities; workforce, governance, and stakeholder needs; measures of impact; and specific follow-up actions.`,
                 category: "roadmap"
             },
-
-            {   id: "d2-11",
-                day: 2,
-                time: "3:30-3:45 PM",
-                title: "Afternoon Coffee Break",
-                speaker: "",
-                desc: "Refreshments and informal discussion and networking.",
-                category: "break"
-            },
             {
-                id: "d2-12",
+                id: "d2-10",
                 day: 2,
-                time: "3:45-4:30 PM",
+                time: "3:30-4:00 PM",
                 title: "Roadmap Report-Outs",
                 speaker: "",
                 desc: "Approximately 15 minutes for each working group to present its priority questions, proposed activities, milestones, collaborative opportunities, and immediate next steps.",
                 category: "roadmap"
             },
             {
-                id: "d2-13",
+                id: "d2-11",
                 day: 2,
-                time: "4:30-5:00 PM",
+                time: "4:00-4:30 PM",
                 title: "Integrated R-CPIS Research Roadmap, Cross-Theme Priorities, and Closing Remarks",
                 speaker: "Lead: Daan Liang and Cynthia Chen",
                 desc: "A plenary discussion to identify connections among the three roadmaps, shared enabling capabilities, near-term collaborative projects, prospective funding opportunities, and responsibilities for completing the written workshop report. The session concludes with brief closing remarks and acknowledgment of participants.",
                 category: "plenary"
             },
             {
-                id: "d2-14",
+                id: "d2-12",
                 day: 2,
-                time: "5:00 PM",
+                time: "4:30 PM",
                 title: "Workshop Adjournment",
                 speaker: "",
                 desc: "",
