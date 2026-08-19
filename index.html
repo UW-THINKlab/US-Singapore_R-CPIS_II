@@ -125,7 +125,7 @@
                             #2531863]</a>, and the <strong>Part I</strong> workshop was convened in Singapore on March 18-19, 2026 <a href="https://uw-thinklab.github.io/US-Singapore_R-CPIS_Alliance/"
                             class="text-blue-600 hover:text-blue-800 font-medium underline" target="_blank">[here]</a>.
                 <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
-                    An output-driven roadmap workshop focusing on three themes: 1) quantum opportunities for resilient infrastructure systems; 2) resilience red-teaming and benchmarking; and 3) unconventional solutions for infrastructure resilience
+                    An output-driven roadmap workshop focusing on three themes: 1) quantum opportunities for resilient infrastructure systems; 2) resilience red-teaming and benchmarking; and 3) resilience research frontier for infrastructure resilience
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <button onclick="switchView('logistics')" class="w-full sm:w-auto bg-white text-slate-950 hover:bg-slate-100 px-8 py-3.5 rounded-lg text-sm font-semibold transition-all shadow-md">
@@ -252,9 +252,10 @@
                             <div class="flex items-start gap-4">
                                 <span class="bg-slate-100 text-slate-600 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold" id="pillar-num-3">3</span>
                                 <div class="flex-1">
-                                    <h3 class="text-lg font-bold text-slate-950">Unconventional & Nature-Based Solutions</h3>
+                                    <h3 class="text-lg font-bold text-slate-950">Resilience Research Frontier</h3>
                                     <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                                        Blending nature-based solutions and exploiting hidden capacities and resources within infrastructure systems.
+                                        Exploring emerging frontiers in resilience research and developing innovative approaches to enhance infrastructure resilience.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -477,7 +478,7 @@
             <div class="relative max-w-5xl mx-auto text-center">
                 <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">The Workshop Agenda</h2>
                 <p class="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
-                    <strong>Program Design:</strong> Three thematic blocks—quantum applications, resilience red-teaming, and unconventional solutions—each combine a keynote or framing session, technical presentations, a panel discussion, and a Day 2 roadmap working session. </p>
+                    <strong>Program Design:</strong> Three thematic blocks—quantum applications, resilience red-teaming, and resilience research frontier—each combine a keynote or framing session, technical presentations, a panel discussion, and a Day 2 roadmap working session. </p>
             </div>
         </section>
 
@@ -924,6 +925,24 @@
                 desc: " ",
                 link: "https://engineering.nd.edu/faculty/yih-fang-huang/",
                 role: "Program Director"
+            },
+            {
+                category: "us",
+                initials: "EA",
+                name: "Eyad H. Abed",
+                institution: "National Science Foundation (NSF)",
+                desc: " ",
+                link: "https://ece.umd.edu/clark/faculty/346/Eyad-H-Abed",
+                role: "Program Director"
+            },
+            {
+                category: "us",
+                initials: "LC",
+                name: "Lyra Chen",
+                institution: "University of Washington",
+                desc: " ",
+                link: "",
+                role: "Research Scientist"
             }
         ];
 
@@ -949,7 +968,7 @@
             },
             3: {
                 badge: "Pillar 3 Scope",
-                title: "Unconventional & Nature-Based Solutions",
+                title: "Resilience Research Frontier",
                 desc: "",
                 questions: [
                     "",
@@ -1057,23 +1076,24 @@
                 desc: "",
                 category: "keynote"
             },
-            {
-                id: "d1-9",
+            {   id: "d1-9",
                 day: 1,
-                time: "2:15-3:45 PM",
-                title: "Technical and Brainstorming Session 2: Looking Back, Looking Forward: From CRISP, SCC, and CPS to CIVIC and Beyond",
-                speaker: "Lead: David Corman and Elise Miller-Hooks",
-                desc: "Lightening talks by past and current performers of those programs, followed by a discussion on what has been learned and what are our future research needs? Discussion of scientific foundations, implementation barriers, governance, scalability, performance evaluation, public acceptance, and opportunities for real-world demonstrations.",
-                category: "technical"
-            },
-            {   id: "d1-10",
-                day: 1,
-                time: "3:45-4:00 PM",
+                time: "2:15-2:30 PM",
                 title: "Afternoon Coffee Break",
                 speaker: "",
                 desc: "Refreshments and informal discussion and networking.",
                 category: "break"
             },
+            {
+                id: "d1-10",
+                day: 1,
+                time: "2:30-4:00 PM",
+                title: "Technical and Brainstorming Session 2: Looking Back, Looking Forward: From CRISP, SCC, and CPS to CIVIC and Beyond",
+                speaker: "Lead: David Corman and Elise Miller-Hooks",
+                desc: "Lightening talks by past and current performers of those programs, followed by a discussion on what has been learned and what are our future research needs? Discussion of scientific foundations, implementation barriers, governance, scalability, performance evaluation, public acceptance, and opportunities for real-world demonstrations.",
+                category: "technical"
+            },
+
             {
                 id: "d1-11",
                 day: 1,
@@ -1132,7 +1152,7 @@
             {
                 id: "d2-5",
                 day: 2,
-                time: "10:00-11:00 AM",
+                time: "10:00-11:30 AM",
                 title: "Technical Session 3: Resilience Red-Teaming for Cyber-Physical Infrastructure Systems",
                 speaker: "Lead: Yueyue Fan",
                 desc: "Presentations on adversarial testing, stress testing, cascading failures, compound hazards, cyber-physical attacks, AI vulnerabilities, digital twins, benchmark scenarios, and systematic methods for revealing weaknesses in interconnected infrastructure systems.",
@@ -1141,15 +1161,6 @@
             {
                 id: "d2-6",
                 day: 2,
-                time: "11:00-11:30 AM",
-                title: "Panel Discussion 3: Developing a Red-Teaming Science for Infrastructure Resilience",
-                speaker: "Lead: Yueyue Fan",
-                desc: "Discussion of threat models, benchmark systems, failure scenarios, evaluation metrics, datasets, simulation environments, responsible disclosure, and the balance between research transparency and infrastructure security.",
-                category: "panel"
-            },
-            {
-                id: "d2-7",
-                day: 2,
                 time: "11:30-12:30 PM",
                 title: "Networking Lunch",
                 speaker: "",
@@ -1157,7 +1168,7 @@
                 category: "break"
             },
             {
-                id: "d2-8",
+                id: "d2-7",
                 day: 2,
                 time: "12:30-1:30 PM",
                 title: "NSF PD presentations and Q&A",
@@ -1166,20 +1177,20 @@
                 category: "plenary"
             },
             {
-                id: "d2-9",
+                id: "d2-8",
                 day: 2,
                 time: "1:30-3:30 PM",
                 title: "Parallel Roadmap Working Sessions",
                 speaker: "",
                 desc: `Each technical-session lead convenes a working group to produce a preliminary roadmap for the corresponding area. <br>
                 * <strong>Working group A</strong>: Quantum Applications for Civil Infrastructure Systems<br>
-                * <strong>Working group B</strong>: Resilience Red-Teaming and Benchmarking<br>
-                * <strong>Working group C</strong>: Unconventional Solutions for Infrastructure Resilience<br>
+                * <strong>Working group B</strong>: Looking back and forward from CRISP, SCC, CPS, CIVIC and beyond<br>
+                * <strong>Working group C</strong>: Resilience Red-Teaming and Benchmarking<br>
                 <strong>Expected roadmap elements:</strong> priority research questions; near-, medium-, and long-term objectives; required data, models, testbeds, and benchmarks; pilot and demonstration opportunities; workforce, governance, and stakeholder needs; measures of impact; and specific follow-up actions.`,
                 category: "roadmap"
             },
             {
-                id: "d2-10",
+                id: "d2-9",
                 day: 2,
                 time: "3:30-4:00 PM",
                 title: "Roadmap Report-Outs",
@@ -1188,7 +1199,7 @@
                 category: "roadmap"
             },
             {
-                id: "d2-11",
+                id: "d2-10",
                 day: 2,
                 time: "4:00-4:30 PM",
                 title: "Integrated R-CPIS Research Roadmap, Cross-Theme Priorities, and Closing Remarks",
@@ -1197,7 +1208,7 @@
                 category: "plenary"
             },
             {
-                id: "d2-12",
+                id: "d2-11",
                 day: 2,
                 time: "4:30 PM",
                 title: "Workshop Adjournment",
