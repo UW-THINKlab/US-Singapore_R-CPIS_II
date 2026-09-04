@@ -303,14 +303,14 @@
                 <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest block mb-2 font-mono">Visionary Insights</span>
                 <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">Keynote Speeches</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Keynote 1 -->
                 <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-6">
                     <img src="images/VishalSharma.png" onerror="this.src='https://placehold.co/100x100/e2e8f0/64748b?text=S1'" alt="Speaker 1" class="w-16 h-16 rounded-full object-cover">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900 mb-1">Keynote #1: Quantum Applications in Civil Infrastructure Systems</h3>
                         <p class="text-blue-600 font-medium text-sm">Speaker: Vishal Sharma, Phasecraft</p>
-                        <p class="text-slate-600 text-sm mt-1"> </p>
+                        <p class="text-slate-600 text-sm mt-1">This keynote will provide a non-technical, general overview of the quantum sector, primarily touching on computing but also partially sensing and networking. It will cover how industry, academia, and government are approaching and advancing the field, and where the technology stands today and what is expected in the coming years.</p>
                     </div>
                 </div>
                 <!-- Keynote 2 -->
@@ -319,7 +319,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-slate-900 mb-1">Keynote #2: Stress-Testing Autonomous Vehicles and Beyond: Mcity and Infrastructure Resilience</h3>
                         <p class="text-blue-600 font-medium text-sm">Speaker: Henry Liu, University of Michigan, Ann Arbor</p>
-                        <p class="text-slate-600 text-sm mt-1">Abstract: This talk explores what resilience means for transportation infrastructure in the age of automation, using Mcity's role as a stress-testing ground for autonomous vehicles as a starting point. It will discuss how controlled, adversarial testing at Mcity surfaces failure modes before they reach public roads, and how these lessons extend beyond AVs to the broader infrastructure systems.</p>
+                        <p class="text-slate-600 text-sm mt-1">This talk explores what resilience means for transportation infrastructure in the age of automation, using Mcity's role as a stress-testing ground for autonomous vehicles as a starting point. It will discuss how controlled, adversarial testing at Mcity surfaces failure modes before they reach public roads, and how these lessons extend beyond AVs to the broader infrastructure systems.</p>
                     </div>
                 </div>
             </div>
@@ -937,6 +937,15 @@
                 desc: " ",
                 link: "",
                 role: "Research Scientist"
+            },
+            {
+                category: "us",
+                initials: "MC",
+                name: "Marcos Crichigno",
+                institution: "Phasecraft",
+                desc: " ",
+                link: "",
+                role: "Senior Quantum Algorithms Scientist"
             }
         ];
 
@@ -971,30 +980,6 @@
             }
         };
 
-        // Complete Structured Day 1 & Day 2 Schedule Database
-        const scheduleDb_v0 = [
-            {
-                id: "s1",
-                day: 1,
-                time: "",
-                title: "Coming Soon",
-                desc: "",
-                location: "",
-                category: "",
-                details: ""
-            },
-            {
-                id: "s6",
-                day: 2,
-                time: "",
-                title: "Coming Soon",
-                desc: "",
-                location: "",
-                category: "",
-                details: ""
-            }
-        ];
-
         // Complete Structured Day 1 & Day 2 Schedule Database (Small-scale single room setup, category-driven)
         const scheduleDb = [
             // Day 1 Schedule
@@ -1022,7 +1007,7 @@
                 time: "9:00-9:45 AM",
                 title: "Keynote Address 1: Quantum Technologies for Civil Infrastructure Systems",
                 speaker: "Speaker: Vishal Sharma, Phasecraft",
-                desc: "",
+                desc: "This keynote will provide a non-technical, general overview of the quantum sector, primarily touching on computing but also partially sensing and networking. It will cover how industry, academia, and government are approaching and advancing the field, and where the technology stands today and what is expected in the coming years.",
                 category: "keynote"
             },
             {
@@ -1038,9 +1023,9 @@
                 id: "d1-5",
                 day: 1,
                 time: "10:00-11:00 AM",
-                title: "Tutorial: Quantum Applications for Civil Engineering and Infrastructure Systems",
-                speaker: "Lead: Vishal Sharma",
-                desc: "An accessible introduction for civil engineering and infrastructure researchers without a quantum-computing background. Possible topics include quantum computing, quantum optimization, quantum sensing, quantum communication and security, potential infrastructure applications, technology-readiness levels, and realistic near- and longer-term opportunities.",
+                title: "Tutorial: A tutorial on Quantum Computing and Quantum Algorithms",
+                speaker: "Lead: Marcos Crichigno, Phasecraft",
+                desc: "Together with the keynote by Dr. Sharma, the general takeaway from both talks will be that attendees will (1) become familiar with the quantum sector, how it is structured, how industry, academia, and government are working to make advancements, and (2) become familiar with some core concepts of quantum computation and algorithms. These talks will serve as a launching point for the attendees to think about quantum computing within the context of their own fields, and have the content serve as a catalyst for future workshops, discussions, and collaborations.",
                 category: "tutorial"
             },
             {
