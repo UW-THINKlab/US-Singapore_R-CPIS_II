@@ -1072,6 +1072,7 @@
                 title: "Keynote Address 1: Quantum Technologies for Civil Infrastructure Systems",
                 speaker: "Speaker: Vishal Sharma, Phasecraft",
                 video: "https://drive.google.com/file/d/16rO9nAFCP228ljLrca_jetTZOqt-q5p9/view?usp=sharing",
+                slides: "slides/Vishal CPS Resilience Workshop Quantum Slides.pdf",
                 desc: "This keynote will provide a non-technical, general overview of the quantum sector, primarily touching on computing but also partially sensing and networking. It will cover how industry, academia, and government are approaching and advancing the field, and where the technology stands today and what is expected in the coming years.",
                 category: "keynote"
             },
@@ -1091,6 +1092,7 @@
                 title: "Tutorial: A tutorial on Quantum Computing and Quantum Algorithms",
                 speaker: "Lead: Marcos Crichigno, Phasecraft",
                 video: "https://drive.google.com/file/d/1SiQNWET9ijFXscwRlonjn1YIC5PdCIyV/view?usp=sharing",
+                slides: "slides/Quantum 101 by Marcos_compressed.pdf",
                 desc: "Together with the keynote by Dr. Sharma, the general takeaway from both talks will be that attendees will (1) become familiar with the quantum sector, how it is structured, how industry, academia, and government are working to make advancements, and (2) become familiar with some core concepts of quantum computation and algorithms. These talks will serve as a launching point for the attendees to think about quantum computing within the context of their own fields, and have the content serve as a catalyst for future workshops, discussions, and collaborations.",
                 category: "tutorial"
             },
@@ -1721,11 +1723,19 @@
                                 <h4 class="text-base font-bold text-slate-950">${item.title}</h4>
                                 <p class="text-md font-bold text-slate-600 mt-1">${item.speaker}</p>
                                 <p class="text-xs text-slate-600 mt-2 leading-relaxed">${item.desc}</p>
+                                ${item.video || item.slides ? `
+                                <div class="mt-3 flex flex-wrap items-center gap-2">
                                 ${item.video ? `
-                                <button onclick="toggleAgendaVideo('${item.id}')" id="video-btn-${item.id}" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100 transition-all">
+                                <button onclick="toggleAgendaVideo('${item.id}')" id="video-btn-${item.id}" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100 transition-all">
                                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                                     <span id="video-btn-label-${item.id}">Watch recording</span>
                                 </button>` : ''}
+                                ${item.slides ? `
+                                <a href="${encodeURI(item.slides)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition-all">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <span>View slides (PDF)</span>
+                                </a>` : ''}
+                                </div>` : ''}
                             </div>
                         </div>
                         ${item.video ? `
